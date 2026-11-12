@@ -1,0 +1,1 @@
+PASS: SHA256 de todos los archivos, ninguna clave local incluida, generador de simulaciones probado desde ZIP extraído sin tarea anterior.

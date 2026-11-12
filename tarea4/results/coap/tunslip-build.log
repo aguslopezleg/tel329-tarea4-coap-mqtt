@@ -1,0 +1,3 @@
+make: Entering directory '/work/vendor/contiki-ng/tools/serial-io'
+cc -Wall -Werror -O2 tunslip6.c tools-utils.c -o tunslip6
+make: Leaving directory '/work/vendor/contiki-ng/tools/serial-io'

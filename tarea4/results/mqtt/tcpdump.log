@@ -1,0 +1,5 @@
+tcpdump: listening on tun0, link-type RAW (Raw IP), snapshot length 262144 bytes
+tcpdump: pcap_loop: The interface disappeared
+296 packets captured
+296 packets received by filter
+0 packets dropped by kernel

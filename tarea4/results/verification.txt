@@ -1,0 +1,2 @@
+coap: five nodes, >=10 confirmed exchanges/node, PCAP RTT agrees with app within 2ms; 90 pairs
+mqtt: five nodes, >=10 confirmed exchanges/node, PCAP RTT agrees with app within 2ms; 85 pairs

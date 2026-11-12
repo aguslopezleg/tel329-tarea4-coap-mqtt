@@ -1,0 +1,11 @@
+{"event":"START","mode":"local-file","sensorUrl":"http://[fd00::202:2:2:2]/"}
+{"event":"SENT","mode":"local-file","body":{"deviceId":"contiki-ng-01","node":2,"seq":1,"temperature":31,"humidity":85,"sampledAt":"2026-11-12T21:37:18.909Z"},"properties":{"temperatureAlert":"true"}}
+{"event":"SENT","mode":"local-file","body":{"deviceId":"contiki-ng-01","node":2,"seq":2,"temperature":33,"humidity":83,"sampledAt":"2026-11-12T21:37:22.236Z"},"properties":{"temperatureAlert":"true"}}
+{"event":"SENT","mode":"local-file","body":{"deviceId":"contiki-ng-01","node":2,"seq":3,"temperature":35,"humidity":83,"sampledAt":"2026-11-12T21:37:25.473Z"},"properties":{"temperatureAlert":"true"}}
+{"event":"SENT","mode":"local-file","body":{"deviceId":"contiki-ng-01","node":2,"seq":4,"temperature":37,"humidity":87,"sampledAt":"2026-11-12T21:37:28.825Z"},"properties":{"temperatureAlert":"true"}}
+{"event":"SENT","mode":"local-file","body":{"deviceId":"contiki-ng-01","node":2,"seq":5,"temperature":17,"humidity":88,"sampledAt":"2026-11-12T21:37:32.135Z"},"properties":{"temperatureAlert":"false"}}
+{"event":"SENT","mode":"local-file","body":{"deviceId":"contiki-ng-01","node":2,"seq":6,"temperature":25,"humidity":81,"sampledAt":"2026-11-12T21:37:35.417Z"},"properties":{"temperatureAlert":"false"}}
+{"event":"SENT","mode":"local-file","body":{"deviceId":"contiki-ng-01","node":2,"seq":7,"temperature":21,"humidity":81,"sampledAt":"2026-11-12T21:37:38.638Z"},"properties":{"temperatureAlert":"false"}}
+{"event":"SENT","mode":"local-file","body":{"deviceId":"contiki-ng-01","node":2,"seq":8,"temperature":32,"humidity":82,"sampledAt":"2026-11-12T21:37:41.937Z"},"properties":{"temperatureAlert":"true"}}
+{"event":"SENT","mode":"local-file","body":{"deviceId":"contiki-ng-01","node":2,"seq":9,"temperature":20,"humidity":82,"sampledAt":"2026-11-12T21:37:45.305Z"},"properties":{"temperatureAlert":"false"}}
+{"event":"SENT","mode":"local-file","body":{"deviceId":"contiki-ng-01","node":2,"seq":10,"temperature":18,"humidity":89,"sampledAt":"2026-11-12T21:37:48.586Z"},"properties":{"temperatureAlert":"false"}}

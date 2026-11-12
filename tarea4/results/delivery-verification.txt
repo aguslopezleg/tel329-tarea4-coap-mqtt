@@ -1,0 +1,2 @@
+PASS coap: 90 generated samples = 90 delivered samples, identical node/seq/temp, five nodes, no duplicate application readings, simulation TEST OK.
+PASS mqtt: 85 generated samples = 85 delivered samples, identical node/seq/temp, five nodes, no duplicate application readings, simulation TEST OK.

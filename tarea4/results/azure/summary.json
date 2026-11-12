@@ -1,0 +1,51 @@
+{
+  "hub": "tel329-t4-alopez-20261112",
+  "tier": "F1 Free",
+  "region": "Brazil South",
+  "device": "contiki-ng-01",
+  "sent": 10,
+  "received_unique": 10,
+  "sensor_samples": 10,
+  "transport_device_to_cloud": "MQTT/TLS",
+  "transport_consumer": "AMQP/TLS",
+  "first_sample": {
+    "event": "SENT",
+    "mode": "azure",
+    "body": {
+      "deviceId": "contiki-ng-01",
+      "node": 2,
+      "seq": 1,
+      "temperature": 31,
+      "humidity": 85,
+      "sampledAt": "2026-11-12T22:27:41.884Z"
+    },
+    "properties": {
+      "temperatureAlert": "true"
+    }
+  },
+  "azure_first_event": {
+    "event": "AZURE_RECEIVED",
+    "partition": "0",
+    "body": {
+      "deviceId": "contiki-ng-01",
+      "node": 2,
+      "seq": 1,
+      "temperature": 31,
+      "humidity": 85,
+      "sampledAt": "2026-11-12T22:27:41.884Z"
+    },
+    "properties": {
+      "temperatureAlert": "true"
+    },
+    "systemProperties": {
+      "iothub-connection-device-id": "contiki-ng-01",
+      "iothub-connection-auth-generation-id": "639301191223377853",
+      "iothub-enqueuedtime": 1794522462046,
+      "iothub-message-source": "Telemetry",
+      "iothub-connection-auth-method": "{\"scope\":\"device\",\"type\":\"sas\",\"issuer\":\"iothub\"}",
+      "x-opt-sequence-number-epoch": -1,
+      "contentType": "application/json",
+      "contentEncoding": "utf-8"
+    }
+  }
+}

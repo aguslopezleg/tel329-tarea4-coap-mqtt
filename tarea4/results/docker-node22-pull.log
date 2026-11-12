@@ -1,0 +1,21 @@
+22-bullseye-slim: Pulling from library/node
+7abdbba0c81d: Pulling fs layer
+104799d4ff5b: Pulling fs layer
+b04b0ee71c81: Pulling fs layer
+66f04fbb641b: Pulling fs layer
+9f10abb57f32: Pulling fs layer
+f79c20815056: Download complete
+104799d4ff5b: Download complete
+7abdbba0c81d: Download complete
+bc96482d6035: Download complete
+104799d4ff5b: Pull complete
+66f04fbb641b: Download complete
+b04b0ee71c81: Download complete
+9f10abb57f32: Download complete
+9f10abb57f32: Pull complete
+b04b0ee71c81: Pull complete
+7abdbba0c81d: Pull complete
+66f04fbb641b: Pull complete
+Digest: sha256:5736e7ef1f3f2109be7ef8aea0cbdf931804aee9a18c6760507b8ded078b25a9
+Status: Downloaded newer image for node:22-bullseye-slim
+docker.io/library/node:22-bullseye-slim

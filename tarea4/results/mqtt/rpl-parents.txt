@@ -1,0 +1,5 @@
+13469296	2	[INFO: RPL       ] parent switch: (NULL IP addr) -> fe80::201:1:1:1
+29608296	3	[INFO: RPL       ] parent switch: (NULL IP addr) -> fe80::202:2:2:2
+30952296	5	[INFO: RPL       ] parent switch: (NULL IP addr) -> fe80::202:2:2:2
+43897296	6	[INFO: RPL       ] parent switch: (NULL IP addr) -> fe80::203:3:3:3
+46016296	4	[INFO: RPL       ] parent switch: (NULL IP addr) -> fe80::205:5:5:5

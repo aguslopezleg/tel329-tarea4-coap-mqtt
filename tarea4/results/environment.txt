@@ -1,0 +1,26 @@
+Name: aiocoap
+Version: 0.4.17
+Summary: Python CoAP library
+Home-page: 
+Author: the aiocoap contributors
+Author-email: Christian Amsüss <chrysn@fsfe.org>
+License: 
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: 
+Required-by: 
+---
+Name: scapy
+Version: 2.8.0
+Summary: Scapy: interactive packet manipulation tool
+Home-page: 
+Author: Philippe BIONDI, Gabriel POTTER
+Author-email: 
+License: 
+Location: /usr/local/lib/python3.10/dist-packages
+Requires: 
+Required-by: 
+mosquitto version 2.0.11
+
+TShark (Wireshark) 3.6.2 (Git v3.6.2 packaged as 3.6.2-2)
+
+aarch64

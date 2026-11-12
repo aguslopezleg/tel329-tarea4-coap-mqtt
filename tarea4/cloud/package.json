@@ -1,0 +1,20 @@
+{
+ "name": "tel329-tarea4-cloud",
+ "version": "1.0.0",
+ "private": true,
+ "description": "Puente Contiki-NG HTTP IPv6 a Azure IoT Hub con validacion local explicita",
+ "engines": {
+  "node": ">=22"
+ },
+ "scripts": {
+  "middleware": "node middleware.cjs",
+  "subscriber": "node subscriber.cjs",
+  "test": "node --test test.cjs"
+ },
+ "dependencies": {
+  "@azure/event-hubs": "^6.0.0",
+  "azure-iot-device": "^1.18.0",
+  "azure-iot-device-mqtt": "^1.16.0",
+  "azure-iothub": "^1.16.6"
+ }
+}

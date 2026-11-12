@@ -1,0 +1,440 @@
+slip connected to ``127.0.0.1:60001''
+opened tun device ``/dev/tun0''
+ifconfig tun0 inet `hostname` mtu 1500 up
+ifconfig tun0 add fd00::1/64
+ifconfig tun0 add fe80::0:0:0:1/64
+ifconfig tun0
+
+tun0: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1500
+        inet 172.17.0.3  netmask 255.255.255.255  destination 172.17.0.3
+        inet6 fe80::ffbe:c70b:119a:ceea  prefixlen 64  scopeid 0x20<link>
+        inet6 fe80::1  prefixlen 64  scopeid 0x20<link>
+        inet6 fd00::1  prefixlen 64  scopeid 0x0<global>
+        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 500  (UNSPEC)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[INFO: Main      ] Starting Contiki-NG-release/v5.1-dirty
+[INFO: Main      ] - Routing: RPL Lite
+[INFO: Main      ] - Net: sicslowpan
+[INFO: Main      ] - MAC: CSMA
+[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+[INFO: Main      ] - 802.15.4 Default channel: 26
+[INFO: Main      ] Node ID: 1
+[INFO: Main      ] Link-layer address: 0001.0001.0001.0001
+[INFO: RPL       ] initializing
+[INFO: Main      ] Tentative link-local IPv6 address: fe80::201:1:1:1
+ROOT RPL-Lite SLIP ready
+[INFO: BR        ] RPL-Border router started
+*** Address:fd00::1 => fd00:0000:0000:0000
+[INFO: RPL       ] IPv6 addresses:
+[INFO: RPL       ] -- fd00::201:1:1:1
+[INFO: RPL       ] -- fe80::201:1:1:1
+[INFO: RPL       ] reset DIO timer (Init root)
+[INFO: RPL       ] created DAG with instance ID 0, DAG ID fd00::201:1:1:1, rank 128
+[INFO: RPL       ] created a new RPL DAG
+[INFO: BR        ] Waiting for prefix
+[INFO: BR        ] Server IPv6 addresses:
+[INFO: BR        ]   fd00::201:1:1:1
+[INFO: BR        ]   fe80::201:1:1:1
+[INFO: RPL       ] sending a multicast-DIO with rank 128 to ff02::1a
+[INFO: RPL       ] received a unicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 65535
+[INFO: RPL       ] received a unicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 65535
+[INFO: RPL       ] received a unicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 65535
+[INFO: RPL       ] received a unicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 65535
+[INFO: RPL       ] sending a multicast-DIO with rank 128 to ff02::1a
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::201:1:1:1 going up, sender closer 0 (337 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] received a DAO from fd00::202:2:2:2, seqno 241, lifetime 30, prefix fd00::202:2:2:2, prefix length 128, parent fd00::201:1:1:1 
+[INFO: RPL       ] sending a DAO-ACK seqno 241 to fd00::202:2:2:2 with status 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 290
+[INFO: RPL       ] received a multicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 328
+[INFO: RPL       ] received a multicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 328
+[INFO: RPL       ] sending a multicast-DIO with rank 128 to ff02::1a
+[INFO: RPL       ] received a multicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 328
+[INFO: RPL       ] sending a multicast-DIO with rank 128 to ff02::1a
+[INFO: RPL       ] nbr: own state, addr fd00::201:1:1:1, DAG state: reachable, MOP 1 OCP 1 rank 128 max-rank 65535, dioint 15, nbr count 1 (Periodic)
+[INFO: RPL       ] nbr: fe80::202:2:2:2  328,   290 =>   618 --  1  ba   (last tx 0 min ago)
+[INFO: RPL       ] nbr: end of list
+[INFO: RPL       ] links: 2 routing links in total (Periodic)
+[INFO: RPL       ] links: fd00::201:1:1:1  (DODAG root) (lifetime: infinite)
+[INFO: RPL       ] links: fd00::202:2:2:2  to fd00::201:1:1:1 (lifetime: 1740 seconds)
+[INFO: RPL       ] links: end of list
+[INFO: RPL       ] received a multicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 328
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 249
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (328 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 218
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 209
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 200
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (320 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 192
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 185
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (307 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 179
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (307 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 173
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (296 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 168
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (292 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 164
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 160
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 156
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (288 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 153
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 150
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (281 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 147
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (281 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 145
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (275 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 143
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (273 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 141
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 139
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 137
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (271 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 136
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 135
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (267 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 134
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (267 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 133
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (264 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 132
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (263 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 131
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 130
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 129
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (262 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (260 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (260 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (258 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (257 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+[INFO: RPL       ] SRH node not found, skip SRH insertion
+[INFO: RPL       ] sending a multicast-DIO with rank 128 to ff02::1a
+tunslip6: serial_to_tun: read: Resource temporarily unavailable
+ifconfig tun0 down
+netstat -nr | awk '{ if ($2 == "tun0") print "route delete -net "$1; }' | sh

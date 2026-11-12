@@ -1,0 +1,1 @@
+PASS: 10 lecturas reales Contiki-NG HTTP -> middleware -> archivo local -> consumidor local; identidad, secuencia, temperatura, humedad y alerta coinciden. Control local; la ejecución Azure se documenta por separado en results/azure/.

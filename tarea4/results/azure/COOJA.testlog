@@ -1,0 +1,994 @@
+Random seed: 1
+549000	1	[INFO: Main      ] - Routing: RPL Lite
+549000	1	[INFO: Main      ] - Net: sicslowpan
+549000	1	[INFO: Main      ] - MAC: CSMA
+549000	1	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+549000	1	[INFO: Main      ] - 802.15.4 Default channel: 26
+549000	1	[INFO: Main      ] Node ID: 1
+549000	1	[INFO: Main      ] Link-layer address: 0001.0001.0001.0001
+549000	1	[INFO: RPL       ] initializing
+549000	1	[INFO: Main      ] Tentative link-local IPv6 address: fe80::201:1:1:1
+549000	1	ROOT RPL-Lite SLIP ready
+549000	1	[INFO: BR        ] RPL-Border router started
+550000	1	?P[INFO: RPL       ] IPv6 addresses:
+550000	1	[INFO: RPL       ] -- fd00::201:1:1:1
+550000	1	[INFO: RPL       ] -- fe80::201:1:1:1
+550000	1	[INFO: RPL       ] reset DIO timer (Init root)
+550000	1	[INFO: RPL       ] created DAG with instance ID 0, DAG ID fd00::201:1:1:1, rank 128
+550000	1	[INFO: RPL       ] created a new RPL DAG
+765000	2	[INFO: Main      ] Starting Contiki-NG-release/v5.1-dirty
+765000	2	[INFO: Main      ] - Routing: RPL Lite
+765000	2	[INFO: Main      ] - Net: sicslowpan
+765000	2	[INFO: Main      ] - MAC: CSMA
+765000	2	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+765000	2	[INFO: Main      ] - 802.15.4 Default channel: 26
+765000	2	[INFO: Main      ] Node ID: 2
+765000	2	[INFO: Main      ] Link-layer address: 0002.0002.0002.0002
+765000	2	[INFO: RPL       ] initializing
+765000	2	[INFO: Main      ] Tentative link-local IPv6 address: fe80::202:2:2:2
+765000	2	HTTP_READY node=2 port=80
+1549000	1	[INFO: BR        ] Waiting for prefix
+1549000	1	[INFO: BR        ] Server IPv6 addresses:
+1549000	1	[INFO: BR        ]   fd00::201:1:1:1
+1549000	1	[INFO: BR        ]   fe80::201:1:1:1
+3244000	1	[INFO: RPL       ] sending a multicast-DIO with rank 128 to ff02::1a
+RADIO time=3271040 start=3268000 node=1 hex=41d8facdabffff01000100010001007a3b3a1a9b01012100f0008008f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd00000000000000000000000000000044d8
+3271040	2	[INFO: RPL       ] received a multicast-DIO from fe80::201:1:1:1, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 128
+3271040	2	[INFO: RPL       ] adding global IP address fd00::202:2:2:2
+3271040	2	[INFO: RPL       ] reset MRHOF
+3271040	2	[INFO: RPL       ] initialized DAG with instance ID 0, DAG ID fd00::201:1:1:1, prexix fd00::/64, rank 65535
+3271040	2	[WARN: RPL       ] just joined, no parent yet, setting timer for leaving
+3271040	2	[INFO: RPL       ] refreshing lifetime
+3271040	2	[INFO: RPL       ] best parent is not fresh, schedule urgent probing to fe80::201:1:1:1
+3567000	2	[INFO: RPL       ] probing fe80::201:1:1:1 (urgent) last tx 0 min ago
+3567000	2	[INFO: RPL       ] sending a unicast-DIO with rank 65535 to fe80::201:1:1:1
+RADIO time=3590200 start=3587000 node=2 hex=61dc3acdab010001000100010002000200020002007a333a9b01003500f0ffff08f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd00000000000000000000000000000097f1
+RADIO time=3591296 start=3591200 node=1 hex=02003a612b
+3591296	1	[INFO: RPL       ] received a unicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 65535
+3591296	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 290
+3591296	2	[INFO: RPL       ] best parent is not fresh, schedule urgent probing to fe80::201:1:1:1
+4087000	2	[INFO: RPL       ] probing fe80::201:1:1:1 (urgent) last tx 0 min ago
+4087000	2	[INFO: RPL       ] sending a unicast-DIO with rank 65535 to fe80::201:1:1:1
+RADIO time=4124200 start=4121000 node=2 hex=61dc3bcdab010001000100010002000200020002007a333a9b01003500f0ffff08f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd000000000000000000000000000000ec87
+RADIO time=4125296 start=4125200 node=1 hex=02003be83a
+4125296	1	[INFO: RPL       ] received a unicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 65535
+4125296	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 249
+4125296	2	[INFO: RPL       ] best parent is not fresh, schedule urgent probing to fe80::201:1:1:1
+6046000	2	[INFO: RPL       ] probing fe80::201:1:1:1 (urgent) last tx 0 min ago
+6046000	2	[INFO: RPL       ] sending a unicast-DIO with rank 65535 to fe80::201:1:1:1
+RADIO time=6069200 start=6066000 node=2 hex=61dc3ccdab010001000100010002000200020002007a333a9b01003500f0ffff08f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd0000000000000000000000000000009ccc
+RADIO time=6070296 start=6070200 node=1 hex=02003c574e
+6070296	1	[INFO: RPL       ] received a unicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 65535
+6070296	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 218
+6070296	2	[INFO: RPL       ] best parent is not fresh, schedule urgent probing to fe80::201:1:1:1
+8062000	2	[INFO: RPL       ] probing fe80::201:1:1:1 (urgent) last tx 0 min ago
+8062000	2	[INFO: RPL       ] sending a unicast-DIO with rank 65535 to fe80::201:1:1:1
+RADIO time=8098200 start=8095000 node=2 hex=61dc3dcdab010001000100010002000200020002007a333a9b01003500f0ffff08f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd000000000000000000000000000000e7ba
+RADIO time=8099296 start=8099200 node=1 hex=02003dde5f
+8099296	1	[INFO: RPL       ] received a unicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 65535
+8099296	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 209
+8099296	2	[INFO: RPL       ] parent switch: (NULL IP addr) -> fe80::201:1:1:1
+8099296	2	[WARN: RPL       ] found parent: fe80::201:1:1:1, staying in DAG
+8099296	2	[INFO: RPL       ] nbr: own state, addr fd00::202:2:2:2, DAG state: joined, MOP 1 OCP 1 rank 337 max-rank 1361, dioint 0, nbr count 1 (Parent switch)
+8099296	2	[INFO: RPL       ] nbr: fe80::201:1:1:1  128,   209 =>   337 --  4 rbafp (last tx 0 min ago)
+8099296	2	[INFO: RPL       ] nbr: end of list
+9623000	1	[INFO: RPL       ] sending a multicast-DIO with rank 128 to ff02::1a
+RADIO time=9631040 start=9628000 node=1 hex=41d8fbcdabffff01000100010001007a3b3a1a9b01012100f0008008f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd00000000000000000000000000000097cf
+9631040	2	[INFO: RPL       ] received a multicast-DIO from fe80::201:1:1:1, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 128
+9631040	2	[INFO: RPL       ] refreshing lifetime
+11802000	2	[INFO: RPL       ] sending a DAO seqno 241, tx count 1, lifetime 30, prefix fd00::202:2:2:2 to fd00::201:1:1:1, parent fe80::201:1:1:1
+11802000	2	[INFO: RPL       ] creating hop-by-hop option
+RADIO time=11836656 start=11834000 node=2 hex=61dc3ecdab010001000100010002000200020002007ef700e03a066304000001519b025b40008000f105120080fd00000000000000020200020002000206140000001efd000000000000000201000100010001f54c
+RADIO time=11837752 start=11837656 node=1 hex=02003e456d
+11837752	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::201:1:1:1 going up, sender closer 0 (337 < 128), rank error 0, loop detected 0
+11837752	1	[INFO: RPL       ] received a DAO from fd00::202:2:2:2, seqno 241, lifetime 30, prefix fd00::202:2:2:2, prefix length 128, parent fd00::201:1:1:1 
+11837752	1	[INFO: RPL       ] sending a DAO-ACK seqno 241 to fd00::202:2:2:2 with status 0
+11837752	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+11837752	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+11837752	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 200
+RADIO time=11864312 start=11863000 node=1 hex=61dcfccdab020002000200020001000100010001007ef700e23a060300ff0000009b0375ab0000f100f490
+RADIO time=11865408 start=11865312 node=2 hex=0200fc5b88
+11865408	2	[INFO: RPL       ] received a DAO-ACK with seqno 241 (241 241) and status 0 from fd00::201:1:1:1
+11865408	2	[INFO: RPL       ] reset DIO timer (Reachable)
+11865408	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 290
+15797000	2	[INFO: RPL       ] sending a multicast-DIO with rank 328 to ff02::1a
+RADIO time=15805040 start=15802000 node=2 hex=41d83fcdabffff02000200020002007a3b3a1a9b01005500f0014808f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd0000000000000000000000000000008423
+15805040	1	[INFO: RPL       ] received a multicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 328
+24149000	2	[INFO: RPL       ] sending a multicast-DIO with rank 328 to ff02::1a
+RADIO time=24172040 start=24169000 node=2 hex=41d840cdabffff02000200020002007a3b3a1a9b01005500f0014808f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd000000000000000000000000000000d3b9
+24172040	1	[INFO: RPL       ] received a multicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 328
+27325000	1	[INFO: RPL       ] sending a multicast-DIO with rank 128 to ff02::1a
+RADIO time=27331040 start=27328000 node=1 hex=41d8fdcdabffff01000100010001007a3b3a1a9b01012100f0008008f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd0000000000000000000000000000007dbf
+27331040	2	[INFO: RPL       ] received a multicast-DIO from fe80::201:1:1:1, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 128
+27331040	2	[INFO: RPL       ] refreshing lifetime
+37546000	2	[INFO: RPL       ] sending a multicast-DIO with rank 328 to ff02::1a
+RADIO time=37567040 start=37564000 node=2 hex=41d841cdabffff02000200020002007a3b3a1a9b01005500f0014808f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd00000000000000000000000000000000ae
+37567040	1	[INFO: RPL       ] received a multicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 328
+50245000	1	[INFO: RPL       ] sending a multicast-DIO with rank 128 to ff02::1a
+RADIO time=50253040 start=50250000 node=1 hex=41d8fecdabffff01000100010001007a3b3a1a9b01012100f0008008f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd0000000000000000000000000000000887
+50253040	2	[INFO: RPL       ] received a multicast-DIO from fe80::201:1:1:1, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 128
+50253040	2	[INFO: RPL       ] refreshing lifetime
+60549000	1	[INFO: RPL       ] nbr: own state, addr fd00::201:1:1:1, DAG state: reachable, MOP 1 OCP 1 rank 128 max-rank 65535, dioint 15, nbr count 1 (Periodic)
+60549000	1	[INFO: RPL       ] nbr: fe80::202:2:2:2  328,   290 =>   618 --  1  ba   (last tx 0 min ago)
+60549000	1	[INFO: RPL       ] nbr: end of list
+60549000	1	[INFO: RPL       ] links: 2 routing links in total (Periodic)
+60549000	1	[INFO: RPL       ] links: fd00::201:1:1:1  (DODAG root) (lifetime: infinite)
+60549000	1	[INFO: RPL       ] links: fd00::202:2:2:2  to fd00::201:1:1:1 (lifetime: 1740 seconds)
+60549000	1	[INFO: RPL       ] links: end of list
+60765000	2	[INFO: RPL       ] nbr: own state, addr fd00::202:2:2:2, DAG state: reachable, MOP 1 OCP 1 rank 328 max-rank 1352, dioint 15, nbr count 1 (Periodic)
+60765000	2	[INFO: RPL       ] nbr: fe80::201:1:1:1  128,   200 =>   328 --  5 rbafp (last tx 0 min ago)
+60765000	2	[INFO: RPL       ] nbr: end of list
+61473000	2	[INFO: RPL       ] sending a multicast-DIO with rank 328 to ff02::1a
+RADIO time=61498040 start=61495000 node=2 hex=41d842cdabffff02000200020002007a3b3a1a9b01005500f0014808f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd0000000000000000000000000000007596
+61498040	1	[INFO: RPL       ] received a multicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 328
+66765000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+66765000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=66783720 start=66781000 node=1 hex=61dcffcdab020002000200020001000100010001006cd700004ddd3f0000000000000001e206060300ff000000ab9800500520472d00000000a002fd2079ca0000020405a00402080a5c508095000000000103030a1663
+RADIO time=66784816 start=66784720 node=2 hex=0200ffc0ba
+66784816	2	[INFO: RPL       ] creating hop-by-hop option
+66784816	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 249
+RADIO time=66800080 start=66798000 node=2 hex=61dc43cdab010001000100010002000200020002007ef5000000000000000001e006066304000001480050ab98000000000520472e601204c4a0010000020404c40b84
+RADIO time=66801176 start=66801080 node=1 hex=02004327c5
+66801176	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (328 < 128), rank error 0, loop detected 0
+66801176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+66801176	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+66801176	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 192
+66801176	1	`?Pﾫﾘ G.`ￄﾠￄ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+66801176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+66801176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+66801176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=66843080 start=66841000 node=1 hex=61dc00cdab020002000200020001000100010001006cd700004ddd3f0000000000000001e206060300ff000000ab9800500520472e000000015010fd20be710000348a
+RADIO time=66844176 start=66844080 node=2 hex=020000b8b5
+66844176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 218
+RADIO time=66853872 start=66850000 node=1 hex=61dc01cdab02000200020002000100010001000100c08700006cd700004ddd3f0000000000000001e206060300ff000000ab9800500520472e000000015018fd2033820000474554202f20485454502f312e310d0a486f73743a205b666430303a3a3230323a323a323a325d0d0a436f6e6e656374696f6e3a99a0
+RADIO time=66854968 start=66854872 node=2 hex=02000131a4
+66854968	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 209
+RADIO time=66878312 start=66877000 node=1 hex=61dc02cdab02000200020002000100010001000100e08700000f206b6565702d616c6976650d0a0d0af44e
+RADIO time=66879408 start=66879312 node=2 hex=020002aa96
+66879408	2	HTTP_SENSOR payload={"node":2,"seq":1,"temp":31,"hum":85}
+66879408	2	[INFO: RPL       ] creating hop-by-hop option
+66879408	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 200
+RADIO time=66908000 start=66904000 node=2 hex=61dc44cdab01000100010001000200020002000200c0c300007ef5000000000000000001e006066304000001400050ab980000000105204771501804c49e510000485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e33ee
+RADIO time=66909096 start=66909000 node=1 hex=02004498b1
+66909096	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 185
+RADIO time=66939976 start=66937000 node=2 hex=61dc45cdab01000100010001000200020002000200e0c30000106774683a2033370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226e6f6465223a322c22736571223a312c2274656d70223a33312c2268756d223a38357df3e6
+RADIO time=66941072 start=66940976 node=1 hex=02004511a0
+66941072	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (320 < 128), rank error 0, loop detected 0
+66941072	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+66941072	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+66941072	1	`ﾓ?Pﾫﾘ GqPￄﾞQHTTP/1.1 200 OK
+66941072	1	Content-Type: application/json
+66941072	1	Content-Length: 37
+66941072	1	Connection: close
+66941072	1	
+66941072	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 179
+66941072	1	{"node":2,"seq":1,"temp":31,"hum":85}[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+66941072	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+66977000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+66977000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=66983080 start=66981000 node=1 hex=61dc03cdab020002000200020001000100010001006cd700004ddd3f0000000000000001e206060300ff000000ab98005005204771000000805010fca1be2e0000a1f6
+RADIO time=66984176 start=66984080 node=2 hex=0200032387
+66984176	2	[INFO: RPL       ] creating hop-by-hop option
+66984176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 192
+RADIO time=66993080 start=66991000 node=1 hex=61dc04cdab020002000200020001000100010001006cd700004ddd3f0000000000000001e206060300ff000000ab98005005204771000000805011fca1be2d0000e170
+RADIO time=66994176 start=66994080 node=2 hex=0200049cf3
+66994176	2	[INFO: RPL       ] creating hop-by-hop option
+66994176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 185
+RADIO time=67023952 start=67022000 node=2 hex=61dc46cdab010001000100010002000200020002007ef5000000000000000001e006066304000001330050ab980000008005204771501104c4b60b000065c8
+RADIO time=67025048 start=67024952 node=1 hex=0200468a92
+67025048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (307 < 128), rank error 0, loop detected 0
+67025048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+67025048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+67025048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 173
+67025048	1	`?Pﾫﾘﾀ GqPￄﾶ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+67025048	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=67061080 start=67059000 node=1 hex=61dc05cdab020002000200020001000100010001006cd700004ddd3f0000000000000001e206060300ff000000ab98005005204772000000815010fca0be2d00008c33
+RADIO time=67062176 start=67062080 node=2 hex=02000515e2
+67062176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 179
+RADIO time=67069952 start=67068000 node=2 hex=61dc47cdab010001000100010002000200020002007ef5000000000000000001e006066304000001330050ab980000008005204772501004c4b60b00001c6c
+RADIO time=67071048 start=67070952 node=1 hex=0200470383
+67071048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (307 < 128), rank error 0, loop detected 0
+67071048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+67071048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+67071048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 168
+67071048	1	`?Pﾫﾘﾀ GrPￄﾶ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+67071048	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=67094080 start=67092000 node=1 hex=61dc06cdab020002000200020001000100010001006cd700004ddd3f0000000000000001e206060300ff000000ab98005005204772000000815010fca0be2d00008786
+RADIO time=67095176 start=67095080 node=2 hex=0200068ed0
+67095176	2	[INFO: RPL       ] creating hop-by-hop option
+67095176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 173
+RADIO time=67106952 start=67105000 node=2 hex=61dc48cdab010001000100010002000200020002007ef5000000000000000001e006066304000001280050ab980000008105204772501004c4b60a00000772
+RADIO time=67108048 start=67107952 node=1 hex=020048f47b
+67108048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (296 < 128), rank error 0, loop detected 0
+67108048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+67108048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+67108048	1	`?Pﾫﾘﾁ GrPￄﾶ
+67108048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 164
+70131000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+70131000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=70144720 start=70142000 node=1 hex=61dc07cdab020002000200020001000100010001006cd700009a133f0000000000000001e206060300ff000000e79c00506390552300000000a002fd203ebd0000020405a00402080af0fb7e8c000000000103030a75f8
+RADIO time=70145816 start=70145720 node=2 hex=02000707c1
+70145816	2	[INFO: RPL       ] creating hop-by-hop option
+70145816	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 168
+RADIO time=70165080 start=70163000 node=2 hex=61dc49cdab010001000100010002000200020002007ef5000000000000000001e006066304000001240050e79c0000000663905524601204c4f7900000020404c48adc
+RADIO time=70166176 start=70166080 node=1 hex=0200497d6a
+70166176	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (292 < 128), rank error 0, loop detected 0
+70166176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+70166176	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+70166176	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 160
+70225000	1	`?PﾜcﾐU$`ￄﾐￄ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+70225000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+70225000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+70225000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=70270080 start=70268000 node=1 hex=61dc08cdab020002000200020001000100010001006cd700009a133f0000000000000001e206060300ff000000e79c005063905524000000075010fd20160100009532
+RADIO time=70271176 start=70271080 node=2 hex=020008f039
+70271176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 164
+RADIO time=70314872 start=70311000 node=1 hex=61dc09cdab02000200020002000100010001000100c08700016cd700009a133f0000000000000001e206060300ff000000e79c005063905524000000075018fd208b110000474554202f20485454502f312e310d0a486f73743a205b666430303a3a3230323a323a323a325d0d0a436f6e6e656374696f6e3a4182
+RADIO time=70315968 start=70315872 node=2 hex=0200097928
+70315968	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 160
+RADIO time=70342312 start=70341000 node=1 hex=61dc0acdab02000200020002000100010001000100e08700010f206b6565702d616c6976650d0a0d0aa919
+RADIO time=70343408 start=70343312 node=2 hex=02000ae21a
+70343408	2	HTTP_SENSOR payload={"node":2,"seq":2,"temp":33,"hum":83}
+70343408	2	[INFO: RPL       ] creating hop-by-hop option
+70343408	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 156
+RADIO time=70374000 start=70370000 node=2 hex=61dc4acdab01000100010001000200020002000200c0c300017ef5000000000000000001e006066304000001200050e79c0000000763905567501804c4f2e20000485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e8b62
+RADIO time=70375096 start=70375000 node=1 hex=02004ae658
+70375096	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 156
+RADIO time=70402976 start=70400000 node=2 hex=61dc4bcdab01000100010001000200020002000200e0c30001106774683a2033370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226e6f6465223a322c22736571223a322c2274656d70223a33332c2268756d223a38337d2638
+RADIO time=70404072 start=70403976 node=1 hex=02004b6f49
+70404072	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (288 < 128), rank error 0, loop detected 0
+70404072	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+70404072	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+70404072	1	`ﾓ?PﾜcﾐUgPￄHTTP/1.1 200 OK
+70404072	1	Content-Type: application/json
+70404072	1	Content-Length: 37
+70404072	1	Connection: close
+70404072	1	
+70404072	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 153
+70404072	1	{"node":2,"seq":2,"temp":33,"hum":83}[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+70404072	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=70423080 start=70421000 node=1 hex=61dc0bcdab020002000200020001000100010001006cd700009a133f0000000000000001e206060300ff000000e79c005063905567000000865010fca115be00006003
+RADIO time=70424176 start=70424080 node=2 hex=02000b6b0b
+70424176	2	[INFO: RPL       ] creating hop-by-hop option
+70424176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 153
+70424176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+70424176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=70455080 start=70453000 node=1 hex=61dc0ccdab020002000200020001000100010001006cd700009a133f0000000000000001e206060300ff000000e79c005063905567000000865011fca115bd00002085
+RADIO time=70456176 start=70456080 node=2 hex=02000cd47f
+70456176	2	[INFO: RPL       ] creating hop-by-hop option
+70456176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 150
+RADIO time=70464952 start=70463000 node=2 hex=61dc4ccdab010001000100010002000200020002007ef5000000000000000001e006066304000001190050e79c0000008663905567501104c40d9b0000d156
+RADIO time=70466048 start=70465952 node=1 hex=02004cd03d
+70466048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (281 < 128), rank error 0, loop detected 0
+70466048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+70466048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+70466048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 150
+RADIO time=70477952 start=70476000 node=2 hex=61dc4dcdab010001000100010002000200020002007ef5000000000000000001e006066304000001190050e79c0000008663905568501004c40d9b000087b2
+RADIO time=70478048 start=70477952 node=1 hex=02004d592c
+70478048	1	`?PﾜﾆcﾐUgPￄﾛ[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (281 < 128), rank error 0, loop detected 0
+70478048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+70478048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+70478048	1	`?PﾜﾆcﾐUhPￄﾛ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+70478048	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+70478048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 147
+RADIO time=70483128 start=70481048 node=1 hex=61dc0dcdab020002000200020001000100010001006cd700009a133f0000000000000001e206060300ff000000e79c005063905568000000875010fca015bd000091fd
+RADIO time=70484224 start=70484128 node=2 hex=02000d5d6e
+70484224	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 147
+70485224	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+70485224	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=70522080 start=70520000 node=1 hex=61dc0ecdab020002000200020001000100010001006cd700009a133f0000000000000001e206060300ff000000e79c005063905568000000875010fca015bd00009a48
+RADIO time=70523176 start=70523080 node=2 hex=02000ec65c
+70523176	2	[INFO: RPL       ] creating hop-by-hop option
+70523176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 145
+RADIO time=70548952 start=70547000 node=2 hex=61dc4ecdab010001000100010002000200020002007ef5000000000000000001e006066304000001130050e79c0000008763905568501004c40d9a0000b30e
+RADIO time=70550048 start=70549952 node=1 hex=02004ec21e
+70550048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (275 < 128), rank error 0, loop detected 0
+70550048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+70550048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+70550048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 145
+73597000	1	`?PﾜﾇcﾐUhPￄﾚ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+73597000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=73614720 start=73612000 node=1 hex=61dc0fcdab020002000200020001000100010001006cd700029bd93f0000000000000001e206060300ff000000e79e00502843dc9900000000a002fd20930e0000020405a00402080aba4e14bd000000000103030a8f32
+RADIO time=73615816 start=73615720 node=2 hex=02000f4f4d
+73615816	2	[INFO: RPL       ] creating hop-by-hop option
+73615816	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 143
+RADIO time=73630080 start=73628000 node=2 hex=61dc4fcdab010001000100010002000200020002007ef5000000000000000001e006066304000001110050e79e000000142843dc9a601204c4ab570000020404c4bc2a
+RADIO time=73631176 start=73631080 node=1 hex=02004f4b0f
+73631176	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (273 < 128), rank error 0, loop detected 0
+73631176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+73631176	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+73631176	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 143
+73631176	1	`?Pﾞ(Cￜﾚ`ￄﾫWￄ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+73631176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+73631176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+73631176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=73653080 start=73651000 node=1 hex=61dc10cdab020002000200020001000100010001006cd700029bd93f0000000000000001e206060300ff000000e79e00502843dc9a000000155010fd20c9c70000d374
+RADIO time=73654176 start=73654080 node=2 hex=02001039a5
+73654176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 141
+RADIO time=73674872 start=73671000 node=1 hex=61dc11cdab02000200020002000100010001000100c08700026cd700029bd93f0000000000000001e206060300ff000000e79e00502843dc9a000000155018fd203ed80000474554202f20485454502f312e310d0a486f73743a205b666430303a3a3230323a323a323a325d0d0a436f6e6e656374696f6e3a5caf
+RADIO time=73675968 start=73675872 node=2 hex=020011b0b4
+73675968	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 139
+RADIO time=73696312 start=73695000 node=1 hex=61dc12cdab02000200020002000100010001000100e08700020f206b6565702d616c6976650d0a0d0a4ee0
+RADIO time=73697408 start=73697312 node=2 hex=0200122b86
+73697408	2	HTTP_SENSOR payload={"node":2,"seq":3,"temp":23,"hum":87}
+73697408	2	[INFO: RPL       ] creating hop-by-hop option
+73697408	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 137
+RADIO time=73717000 start=73713000 node=2 hex=61dc50cdab01000100010001000200020002000200c0c300027ef5000000000000000001e0060663040000010f0050e79e000000152843dcdd501804c4a5a60000485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6063
+RADIO time=73718096 start=73718000 node=1 hex=0200503de7
+73718096	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 141
+RADIO time=73741976 start=73739000 node=2 hex=61dc51cdab01000100010001000200020002000200e0c30002106774683a2033370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226e6f6465223a322c22736571223a332c2274656d70223a32332c2268756d223a38377d1323
+RADIO time=73743072 start=73742976 node=1 hex=020051b4f6
+73743072	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (271 < 128), rank error 0, loop detected 0
+73743072	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+73743072	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+73743072	1	`ﾓ?Pﾞ(CￜPￄﾥﾦHTTP/1.1 200 OK
+73743072	1	Content-Type: application/json
+73743072	1	Content-Length: 37
+73743072	1	Connection: close
+73743072	1	
+73743072	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 139
+73743072	1	{"node":2,"seq":3,"temp":23,"hum":87}[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+73743072	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=73761080 start=73759000 node=1 hex=61dc13cdab020002000200020001000100010001006cd700029bd93f0000000000000001e206060300ff000000e79e00502843dcdd000000945010fca1c9840000c85f
+RADIO time=73762176 start=73762080 node=2 hex=020013a297
+73762176	2	[INFO: RPL       ] creating hop-by-hop option
+73762176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 136
+73762176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+73762176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=73779952 start=73778000 node=2 hex=61dc52cdab010001000100010002000200020002007ef5000000000000000001e0060663040000010b0050e79e000000942843dcdd501104c4c16100005c33
+RADIO time=73781048 start=73780952 node=1 hex=0200522fc4
+73781048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (267 < 128), rank error 0, loop detected 0
+73781048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+73781048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+73781048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 137
+RADIO time=73801080 start=73799000 node=1 hex=61dc14cdab020002000200020001000100010001006cd700029bd93f0000000000000001e206060300ff000000e79e00502843dcdd000000945011fca1c9830000e9ba
+RADIO time=73802176 start=73802080 node=2 hex=0200141de3
+73802176	2	[INFO: RPL       ] creating hop-by-hop option
+73802176	1	`?Pﾞﾔ(CￜPￄa[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 135
+73802176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+73802176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=73812080 start=73810000 node=1 hex=61dc15cdab020002000200020001000100010001006cd700029bd93f0000000000000001e206060300ff000000e79e00502843dcde000000955010fca0c983000084f9
+RADIO time=73813176 start=73813080 node=2 hex=02001594f2
+73813176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 134
+RADIO time=73839952 start=73838000 node=2 hex=61dc53cdab010001000100010002000200020002007ef5000000000000000001e006066304000001090050e79e000000942843dcde501004c4c1610000fdf9
+RADIO time=73841048 start=73840952 node=1 hex=020053a6d5
+73841048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (265 < 128), rank error 0, loop detected 0
+73841048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+73841048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+73841048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 136
+73857000	1	`?Pﾞﾔ(CￜPￄa[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+73857000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=73863080 start=73861000 node=1 hex=61dc16cdab020002000200020001000100010001006cd700029bd93f0000000000000001e206060300ff000000e79e00502843dcde000000955010fca0c98300008f4c
+RADIO time=73864176 start=73864080 node=2 hex=0200160fc0
+73864176	2	[INFO: RPL       ] creating hop-by-hop option
+73864176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 133
+RADIO time=73875952 start=73874000 node=2 hex=61dc54cdab010001000100010002000200020002007ef5000000000000000001e006066304000001080050e79e000000952843dcde501004c4c16000009301
+RADIO time=73877048 start=73876952 node=1 hex=02005419a1
+73877048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (264 < 128), rank error 0, loop detected 0
+73877048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+73877048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+73877048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 135
+76945000	1	`?Pﾞﾕ(CￜPￄ`[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+76945000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=76954720 start=76952000 node=1 hex=61dc17cdab020002000200020001000100010001006cd7000a99993f0000000000000001e206060300ff000000e7a8005029691b9700000000a002fd202ac30000020405a00402080a6c718ab8000000000103030a3fea
+RADIO time=76955816 start=76955720 node=2 hex=02001786d1
+76955816	2	[INFO: RPL       ] creating hop-by-hop option
+76955816	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 132
+RADIO time=77000080 start=76998000 node=2 hex=61dc55cdab010001000100010002000200020002007ef5000000000000000001e006066304000001070050e7a80000002929691b98601204c46b150000020404c4defe
+RADIO time=77001176 start=77001080 node=1 hex=02005590b0
+77001176	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (263 < 128), rank error 0, loop detected 0
+77001176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+77001176	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+77001176	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 134
+77001176	1	`?Pﾨ))iﾘ`ￄkￄ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+77001176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+77001176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+77001176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=77038080 start=77036000 node=1 hex=61dc18cdab020002000200020001000100010001006cd7000a99993f0000000000000001e206060300ff000000e7a8005029691b980000002a5010fd2089850000fc63
+RADIO time=77039176 start=77039080 node=2 hex=0200187129
+77039176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 131
+RADIO time=77050872 start=77047000 node=1 hex=61dc19cdab02000200020002000100010001000100c08700036cd7000a99993f0000000000000001e206060300ff000000e7a8005029691b980000002a5018fd20fe950000474554202f20485454502f312e310d0a486f73743a205b666430303a3a3230323a323a323a325d0d0a436f6e6e656374696f6e3ad22c
+RADIO time=77051968 start=77051872 node=2 hex=020019f838
+77051968	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 130
+RADIO time=77094312 start=77093000 node=1 hex=61dc1acdab02000200020002000100010001000100e08700030f206b6565702d616c6976650d0a0d0a13b7
+RADIO time=77095408 start=77095312 node=2 hex=02001a630a
+77095408	2	HTTP_SENSOR payload={"node":2,"seq":4,"temp":39,"hum":82}
+77095408	2	[INFO: RPL       ] creating hop-by-hop option
+77095408	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 129
+RADIO time=77114000 start=77110000 node=2 hex=61dc56cdab01000100010001000200020002000200c0c300037ef5000000000000000001e006066304000001060050e7a80000002a29691bdb501804c45e680000485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e5e92
+RADIO time=77115096 start=77115000 node=1 hex=0200560b82
+77115096	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 133
+RADIO time=77156976 start=77154000 node=2 hex=61dc57cdab01000100010001000200020002000200e0c30003106774683a2033370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226e6f6465223a322c22736571223a342c2274656d70223a33392c2268756d223a38327d3874
+RADIO time=77158072 start=77157976 node=1 hex=0200578293
+77158072	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (262 < 128), rank error 0, loop detected 0
+77158072	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+77158072	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+77158072	1	`ﾓ?Pﾨ*)iￛPￄ^hHTTP/1.1 200 OK
+77158072	1	Content-Type: application/json
+77158072	1	Content-Length: 37
+77158072	1	Connection: close
+77158072	1	
+77158072	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 132
+77158072	1	{"node":2,"seq":4,"temp":39,"hum":82}[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+77158072	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+77166000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+77166000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=77203080 start=77201000 node=1 hex=61dc1bcdab020002000200020001000100010001006cd7000a99993f0000000000000001e206060300ff000000e7a8005029691bdb000000a95010fca18942000024aa
+RADIO time=77204176 start=77204080 node=2 hex=02001bea1b
+77204176	2	[INFO: RPL       ] creating hop-by-hop option
+77204176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=77213952 start=77212000 node=2 hex=61dc58cdab010001000100010002000200020002007ef5000000000000000001e006066304000001040050e7a8000000a929691bdb501104c4811f0000054f
+RADIO time=77215048 start=77214952 node=1 hex=020058756b
+77215048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (260 < 128), rank error 0, loop detected 0
+77215048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+77215048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+77215048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 131
+77215048	1	`?Pﾨﾩ)iￛPￄﾁ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+77215048	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=77245080 start=77243000 node=1 hex=61dc1ccdab020002000200020001000100010001006cd7000a99993f0000000000000001e206060300ff000000e7a8005029691bdb000000a95011fca189410000642c
+RADIO time=77246176 start=77246080 node=2 hex=02001c556f
+77246176	2	[INFO: RPL       ] creating hop-by-hop option
+77246176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=77262080 start=77260000 node=1 hex=61dc1dcdab020002000200020001000100010001006cd7000a99993f0000000000000001e206060300ff000000e7a8005029691bdc000000aa5010fca08941000047e2
+RADIO time=77263176 start=77263080 node=2 hex=02001ddc7e
+77263176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=77287952 start=77286000 node=2 hex=61dc59cdab010001000100010002000200020002007ef5000000000000000001e006066304000001030050e7a8000000a929691bdc501004c4811f00009d50
+RADIO time=77289048 start=77288952 node=1 hex=020059fc7a
+77289048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (259 < 128), rank error 0, loop detected 0
+77289048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+77289048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+77289048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 130
+77289048	1	`?Pﾨﾩ)iￜPￄﾁ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+77289048	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=77306080 start=77304000 node=1 hex=61dc1ecdab020002000200020001000100010001006cd7000a99993f0000000000000001e206060300ff000000e7a8005029691bdc000000aa5010fca0894100004c57
+RADIO time=77307176 start=77307080 node=2 hex=02001e474c
+77307176	2	[INFO: RPL       ] creating hop-by-hop option
+77307176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=77333952 start=77332000 node=2 hex=61dc5acdab010001000100010002000200020002007ef5000000000000000001e006066304000001020050e7a8000000aa29691bdc501004c4811e0000360d
+RADIO time=77335048 start=77334952 node=1 hex=02005a6748
+77335048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (258 < 128), rank error 0, loop detected 0
+77335048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+77335048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+77335048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 129
+79704000	2	[INFO: RPL       ] no neighbor needs probing
+80331000	1	`?Pﾨﾪ)iￜPￄﾁ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+80331000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=80360720 start=80358000 node=1 hex=61dc1fcdab020002000200020001000100010001006cd7000acf433f0000000000000001e206060300ff00000094d80050354ebad800000000a002fd205a080000020405a00402080a69c705c7000000000103030a26dd
+RADIO time=80361816 start=80361720 node=2 hex=02001fce5d
+80361816	2	[INFO: RPL       ] creating hop-by-hop option
+80361816	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=80384080 start=80382000 node=2 hex=61dc5bcdab010001000100010002000200020002007ef5000000000000000001e00606630400000101005094d800000045354ebad9601204c412a30000020404c4e83a
+RADIO time=80385176 start=80385080 node=1 hex=02005bee59
+80385176	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (257 < 128), rank error 0, loop detected 0
+80385176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+80385176	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+80385176	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+80385176	1	`?PﾔE5Nﾺ`ￄﾣￄ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+80385176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+80385176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+80385176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=80427080 start=80425000 node=1 hex=61dc20cdab020002000200020001000100010001006cd7000acf433f0000000000000001e206060300ff00000094d80050354ebad9000000465010fd20311300006396
+RADIO time=80428176 start=80428080 node=2 hex=020020ba94
+80428176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=80473872 start=80470000 node=1 hex=61dc21cdab02000200020002000100010001000100c08700046cd7000acf433f0000000000000001e206060300ff00000094d80050354ebad9000000465018fd20a6230000474554202f20485454502f312e310d0a486f73743a205b666430303a3a3230323a323a323a325d0d0a436f6e6e656374696f6e3aee24
+RADIO time=80474968 start=80474872 node=2 hex=0200213385
+80474968	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=80499312 start=80498000 node=1 hex=61dc22cdab02000200020002000100010001000100e08700040f206b6565702d616c6976650d0a0d0a911b
+RADIO time=80500408 start=80500312 node=2 hex=020022a8b7
+80500408	2	HTTP_SENSOR payload={"node":2,"seq":5,"temp":19,"hum":88}
+80500408	2	[INFO: RPL       ] creating hop-by-hop option
+80500408	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=80521000 start=80517000 node=2 hex=61dc5ccdab01000100010001000200020002000200c0c300047ef5000000000000000001e00606630400000100005094d800000046354ebb1c501804c404f20000485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656ecb05
+RADIO time=80522096 start=80522000 node=1 hex=02005c512d
+80522096	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+RADIO time=80529976 start=80527000 node=2 hex=61dc5dcdab01000100010001000200020002000200e0c30004106774683a2033370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226e6f6465223a322c22736571223a352c2274656d70223a31392c2268756d223a38387d02c8
+RADIO time=80531072 start=80530976 node=1 hex=02005dd83c
+80531072	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+80531072	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+80531072	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+80531072	1	`ﾓ?PﾔF5NﾻPￄHTTP/1.1 200 OK
+80531072	1	Content-Type: application/json
+80531072	1	Content-Length: 37
+80531072	1	Connection: close
+80531072	1	
+80531072	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+80531072	1	{"node":2,"seq":5,"temp":19,"hum":88}[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+80531072	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=80537080 start=80535000 node=1 hex=61dc23cdab020002000200020001000100010001006cd7000acf433f0000000000000001e206060300ff00000094d80050354ebb1c000000c55010fca130d00000c785
+RADIO time=80538176 start=80538080 node=2 hex=02002321a6
+80538176	2	[INFO: RPL       ] creating hop-by-hop option
+80538176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+80538176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+80538176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=80543128 start=80541176 node=2 hex=61dc5ecdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005094d8000000c5354ebb1c501104c428ad0000cf11
+RADIO time=80544224 start=80544128 node=1 hex=02005e430e
+80544224	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+80544224	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+80544224	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+80544224	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+RADIO time=80553080 start=80551000 node=1 hex=61dc24cdab020002000200020001000100010001006cd7000acf433f0000000000000001e206060300ff00000094d80050354ebb1c000000c55011fca130cf0000b123
+RADIO time=80554176 start=80554080 node=2 hex=0200249ed2
+80554176	2	[INFO: RPL       ] creating hop-by-hop option
+80554176	1	`?Pﾔￅ5NﾻPￄ(ﾭ[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=80590952 start=80589000 node=2 hex=61dc5fcdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005094d8000000c5354ebb1d501004c428ad00004c2e
+RADIO time=80592048 start=80591952 node=1 hex=02005fca1f
+80592048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+80592048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+80592048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+80592048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+80603000	1	`?Pﾔￅ5NﾻPￄ(ﾭ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+80603000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=80607080 start=80605000 node=1 hex=61dc25cdab020002000200020001000100010001006cd7000acf433f0000000000000001e206060300ff00000094d80050354ebb1d000000c65010fca030cf00007cf0
+RADIO time=80608176 start=80608080 node=2 hex=02002517c3
+80608176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+80608176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+80608176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=80640080 start=80638000 node=1 hex=61dc26cdab020002000200020001000100010001006cd7000acf433f0000000000000001e206060300ff00000094d80050354ebb1d000000c65010fca030cf00007745
+RADIO time=80641176 start=80641080 node=2 hex=0200268cf1
+80641176	2	[INFO: RPL       ] creating hop-by-hop option
+80641176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=80667952 start=80666000 node=2 hex=61dc60cdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005094d8000000c6354ebb1d501004c428ac0000c849
+RADIO time=80669048 start=80668952 node=1 hex=020060bed6
+80669048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+80669048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+80669048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+80669048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+83719000	1	`?Pﾔￆ5NﾻPￄ(ﾬ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+83719000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=83747720 start=83745000 node=1 hex=61dc27cdab020002000200020001000100010001006cd7000b29c93f0000000000000001e206060300ff00000094de00503efa644300000000a002fd20f9e00000020405a00402080a73eea8aa000000000103030ade89
+RADIO time=83748816 start=83748720 node=2 hex=02002705e0
+83748816	2	[INFO: RPL       ] creating hop-by-hop option
+83748816	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=83754080 start=83752000 node=2 hex=61dc61cdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005094de000000633efa6444601204c45f680000020404c4d3d8
+RADIO time=83755176 start=83755080 node=1 hex=02006137c7
+83755176	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+83755176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+83755176	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+83755176	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+83755176	1	`?Pﾔc>dD`ￄ_hￄ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+83755176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+83755176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+83755176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=83796080 start=83794000 node=1 hex=61dc28cdab020002000200020001000100010001006cd7000b29c93f0000000000000001e206060300ff00000094de00503efa6444000000645010fd207dd80000258f
+RADIO time=83797176 start=83797080 node=2 hex=020028f218
+83797176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=83840872 start=83837000 node=1 hex=61dc29cdab02000200020002000100010001000100c08700056cd7000b29c93f0000000000000001e206060300ff00000094de00503efa6444000000645018fd20f2e80000474554202f20485454502f312e310d0a486f73743a205b666430303a3a3230323a323a323a325d0d0a436f6e6e656374696f6e3a522d
+RADIO time=83841968 start=83841872 node=2 hex=0200297b09
+83841968	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=83868312 start=83867000 node=1 hex=61dc2acdab02000200020002000100010001000100e08700050f206b6565702d616c6976650d0a0d0acc4c
+RADIO time=83869408 start=83869312 node=2 hex=02002ae03b
+83869408	2	HTTP_SENSOR payload={"node":2,"seq":6,"temp":27,"hum":80}
+83869408	2	[INFO: RPL       ] creating hop-by-hop option
+83869408	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=83894000 start=83890000 node=2 hex=61dc62cdab01000100010001000200020002000200c0c300057ef5000000000000000001e00606630400000100005094de000000643efa6487501804c452be0000485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e1161
+RADIO time=83895096 start=83895000 node=1 hex=020062acf5
+83895096	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+RADIO time=83935976 start=83933000 node=2 hex=61dc63cdab01000100010001000200020002000200e0c30005106774683a2033370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226e6f6465223a322c22736571223a362c2274656d70223a32372c2268756d223a38307d1171
+RADIO time=83937072 start=83936976 node=1 hex=02006325e4
+83937072	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+83937072	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+83937072	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+83937072	1	`ﾓ?Pﾔd>dﾇPￄRﾾHTTP/1.1 200 OK
+83937072	1	Content-Type: application/json
+83937072	1	Content-Length: 37
+83937072	1	Connection: close
+83937072	1	
+83937072	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+83937072	1	{"node":2,"seq":6,"temp":27,"hum":80}[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+83937072	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+83945000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+83945000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=83981080 start=83979000 node=1 hex=61dc2bcdab020002000200020001000100010001006cd7000b29c93f0000000000000001e206060300ff00000094de00503efa6487000000e35010fca17d9500002cc0
+RADIO time=83982176 start=83982080 node=2 hex=02002b692a
+83982176	2	[INFO: RPL       ] creating hop-by-hop option
+83982176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=83994080 start=83992000 node=1 hex=61dc2ccdab020002000200020001000100010001006cd7000b29c93f0000000000000001e206060300ff00000094de00503efa6487000000e35011fca17d940000d4f3
+RADIO time=83995176 start=83995080 node=2 hex=02002cd65e
+83995176	2	[INFO: RPL       ] creating hop-by-hop option
+83995176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=84022952 start=84021000 node=2 hex=61dc64cdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005094de000000e33efa6487501104c47572000067fe
+RADIO time=84024048 start=84023952 node=1 hex=0200649a90
+84024048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+84024048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+84024048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+84024048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+84024048	1	`?Pﾔ>dﾇPￄur[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+84024048	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=84043080 start=84041000 node=1 hex=61dc2dcdab020002000200020001000100010001006cd7000b29c93f0000000000000001e206060300ff00000094de00503efa6488000000e45010fca07d9400007a2f
+RADIO time=84044176 start=84044080 node=2 hex=02002d5f4f
+84044176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=84049952 start=84048000 node=2 hex=61dc65cdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005094de000000e33efa6488501004c475720000311a
+RADIO time=84051048 start=84050952 node=1 hex=0200651381
+84051048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+84051048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+84051048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+84051048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+84051048	1	`?Pﾔ>dﾈPￄur[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+84051048	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=84076080 start=84074000 node=1 hex=61dc2ecdab020002000200020001000100010001006cd7000b29c93f0000000000000001e206060300ff00000094de00503efa6488000000e45010fca07d940000719a
+RADIO time=84077176 start=84077080 node=2 hex=02002ec47d
+84077176	2	[INFO: RPL       ] creating hop-by-hop option
+84077176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=84085952 start=84084000 node=2 hex=61dc66cdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005094de000000e43efa6488501004c475710000fad3
+RADIO time=84087048 start=84086952 node=1 hex=02006688b3
+84087048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+84087048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+84087048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+84087048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+87097000	1	`?Pﾔ>dﾈPￄuq[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+87097000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=87119720 start=87117000 node=1 hex=61dc2fcdab020002000200020001000100010001006cd70001812c3f0000000000000001e206060300ff00000094ec0050e08b955200000000a002fd205fee0000020405a00402080a87355ca7000000000103030a3813
+RADIO time=87120816 start=87120720 node=2 hex=02002f4d6c
+87120816	2	[INFO: RPL       ] creating hop-by-hop option
+87120816	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=87141080 start=87139000 node=2 hex=61dc67cdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005094ec0000008de08b9553601204c48c8f0000020404c43ba1
+RADIO time=87142176 start=87142080 node=1 hex=02006701a2
+87142176	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+87142176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+87142176	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+87142176	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+87142176	1	`?PﾔﾍﾋﾕS`ￄﾌﾏￄ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+87142176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+87142176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+87142176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=87175080 start=87173000 node=1 hex=61dc30cdab020002000200020001000100010001006cd70001812c3f0000000000000001e206060300ff00000094ec0050e08b95530000008e5010fd20aaff00001a06
+RADIO time=87176176 start=87176080 node=2 hex=0200303b84
+87176176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=87221872 start=87218000 node=1 hex=61dc31cdab02000200020002000100010001000100c08700066cd70001812c3f0000000000000001e206060300ff00000094ec0050e08b95530000008e5018fd2020100000474554202f20485454502f312e310d0a486f73743a205b666430303a3a3230323a323a323a325d0d0a436f6e6e656374696f6e3a2f11
+RADIO time=87222968 start=87222872 node=2 hex=020031b295
+87222968	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=87237312 start=87236000 node=1 hex=61dc32cdab02000200020002000100010001000100e08700060f206b6565702d616c6976650d0a0d0a2bb5
+RADIO time=87238408 start=87238312 node=2 hex=02003229a7
+87238408	2	HTTP_SENSOR payload={"node":2,"seq":7,"temp":15,"hum":81}
+87238408	2	[INFO: RPL       ] creating hop-by-hop option
+87238408	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=87259000 start=87255000 node=2 hex=61dc68cdab01000100010001000200020002000200c0c300067ef5000000000000000001e00606630400000100005094ec0000008ee08b9596501804c480e50000485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656eddf7
+RADIO time=87260096 start=87260000 node=1 hex=020068f65a
+87260096	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+RADIO time=87301976 start=87299000 node=2 hex=61dc69cdab01000100010001000200020002000200e0c30006106774683a2033370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226e6f6465223a322c22736571223a372c2274656d70223a31352c2268756d223a38317db732
+RADIO time=87303072 start=87302976 node=1 hex=0200697f4b
+87303072	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+87303072	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+87303072	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+87303072	1	`ﾓ?PﾔﾎﾋﾕﾖPￄﾀHTTP/1.1 200 OK
+87303072	1	Content-Type: application/json
+87303072	1	Content-Length: 37
+87303072	1	Connection: close
+87303072	1	
+87303072	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+87303072	1	{"node":2,"seq":7,"temp":15,"hum":81}[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+87303072	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+87314000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+87314000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=87322080 start=87320000 node=1 hex=61dc33cdab020002000200020001000100010001006cd70001812c3f0000000000000001e206060300ff00000094ec0050e08b95960000010d5010fca1aabc00002457
+RADIO time=87323176 start=87323080 node=2 hex=020033a0b6
+87323176	2	[INFO: RPL       ] creating hop-by-hop option
+87323176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=87337952 start=87336000 node=2 hex=61dc6acdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005094ec0000010de08b9596501104c4a2990000eac7
+RADIO time=87339048 start=87338952 node=1 hex=02006ae479
+87339048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+87339048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+87339048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+87339048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+RADIO time=87357080 start=87355000 node=1 hex=61dc34cdab020002000200020001000100010001006cd70001812c3f0000000000000001e206060300ff00000094ec0050e08b95960000010d5011fca1aabb000005b2
+RADIO time=87358176 start=87358080 node=2 hex=0200341fc2
+87358176	2	[INFO: RPL       ] creating hop-by-hop option
+87358176	1	`?PﾔﾋﾕﾖPￄﾢﾙ[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+87379000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+87379000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=87400952 start=87399000 node=2 hex=61dc6bcdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005094ec0000010de08b9597501004c4a299000069f8
+RADIO time=87402048 start=87401952 node=1 hex=02006b6d68
+87402048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+87402048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+87402048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+87402048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+RADIO time=87419080 start=87417000 node=1 hex=61dc35cdab020002000200020001000100010001006cd70001812c3f0000000000000001e206060300ff00000094ec0050e08b95970000010e5010fca0aabb0000c861
+RADIO time=87420176 start=87420080 node=2 hex=02003596d3
+87420176	1	`?PﾔﾋﾕﾗPￄﾢﾙ[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+87420176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+87420176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=87448080 start=87446000 node=1 hex=61dc36cdab020002000200020001000100010001006cd70001812c3f0000000000000001e206060300ff00000094ec0050e08b95970000010e5010fca0aabb0000c3d4
+RADIO time=87449176 start=87449080 node=2 hex=0200360de1
+87449176	2	[INFO: RPL       ] creating hop-by-hop option
+87449176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=87478952 start=87477000 node=2 hex=61dc6ccdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005094ec0000010ee08b9597501004c4a2980000313c
+RADIO time=87480048 start=87479952 node=1 hex=02006cd21c
+87480048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+87480048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+87480048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+87480048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+90497000	1	`?PﾔﾋﾕﾗPￄﾢﾘ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+90497000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=90532720 start=90530000 node=1 hex=61dc37cdab020002000200020001000100010001006cd7000641103f0000000000000001e206060300ff000000819a0050ffde2b7300000000a002fd20755a0000020405a00402080a4248ea06000000000103030a5da3
+RADIO time=90533816 start=90533720 node=2 hex=02003784f0
+90533816	2	[INFO: RPL       ] creating hop-by-hop option
+90533816	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=90557080 start=90555000 node=2 hex=61dc6dcdab010001000100010002000200020002007ef5000000000000000001e006066304000001000050819a000000beffde2b74601204c4ea3c0000020404c4c9d1
+RADIO time=90558176 start=90558080 node=1 hex=02006d5b0d
+90558176	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+90558176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+90558176	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+90558176	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+90558176	1	`?Pﾁﾚﾾ+t`ￄ<ￄ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+90558176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+90558176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+90558176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=90570080 start=90568000 node=1 hex=61dc38cdab020002000200020001000100010001006cd7000641103f0000000000000001e206060300ff000000819a0050ffde2b74000000bf5010fd2008ad0000c06e
+RADIO time=90571176 start=90571080 node=2 hex=0200387308
+90571176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=90586872 start=90583000 node=1 hex=61dc39cdab02000200020002000100010001000100c08700076cd7000641103f0000000000000001e206060300ff000000819a0050ffde2b74000000bf5018fd207dbd0000474554202f20485454502f312e310d0a486f73743a205b666430303a3a3230323a323a323a325d0d0a436f6e6e656374696f6e3a9ac6
+RADIO time=90587968 start=90587872 node=2 hex=020039fa19
+90587968	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=90596312 start=90595000 node=1 hex=61dc3acdab02000200020002000100010001000100e08700070f206b6565702d616c6976650d0a0d0a76e2
+RADIO time=90597408 start=90597312 node=2 hex=02003a612b
+90597408	2	HTTP_SENSOR payload={"node":2,"seq":8,"temp":29,"hum":82}
+90597408	2	[INFO: RPL       ] creating hop-by-hop option
+90597408	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=90607000 start=90603000 node=2 hex=61dc6ecdab01000100010001000200020002000200c0c300077ef5000000000000000001e006066304000001000050819a000000bfffde2bb7501804c4d9900000485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e8701
+RADIO time=90608096 start=90608000 node=1 hex=02006ec03f
+90608096	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+RADIO time=90619976 start=90617000 node=2 hex=61dc6fcdab01000100010001000200020002000200e0c30007106774683a2033370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226e6f6465223a322c22736571223a382c2274656d70223a32392c2268756d223a38327df175
+RADIO time=90621072 start=90620976 node=1 hex=02006f492e
+90621072	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+90621072	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+90621072	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+90621072	1	`ﾓ?Pﾁﾚ+ﾷPￄﾐHTTP/1.1 200 OK
+90621072	1	Content-Type: application/json
+90621072	1	Content-Length: 37
+90621072	1	Connection: close
+90621072	1	
+90621072	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+90621072	1	{"node":2,"seq":8,"temp":29,"hum":82}[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+90621072	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+90638000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+90638000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=90663080 start=90661000 node=1 hex=61dc3bcdab020002000200020001000100010001006cd7000641103f0000000000000001e206060300ff000000819a0050ffde2bb70000013e5010fca1086a000067d6
+RADIO time=90664176 start=90664080 node=2 hex=02003be83a
+90664176	2	[INFO: RPL       ] creating hop-by-hop option
+90664176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=90674080 start=90672000 node=1 hex=61dc3ccdab020002000200020001000100010001006cd7000641103f0000000000000001e206060300ff000000819a0050ffde2bb70000013e5011fca1086900002750
+RADIO time=90675176 start=90675080 node=2 hex=02003c574e
+90675176	2	[INFO: RPL       ] creating hop-by-hop option
+90675176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=90738952 start=90737000 node=2 hex=61dc70cdab010001000100010002000200020002007ef5000000000000000001e006066304000001000050819a0000013effde2bb7501104c400470000406c
+RADIO time=90740048 start=90739952 node=1 hex=0200703fc6
+90740048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+90740048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+90740048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+90740048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+90740048	1	`?Pﾁﾚ>+ﾷPￄG[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+90740048	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=90745000 start=90743048 node=2 hex=61dc71cdab010001000100010002000200020002007ef5000000000000000001e006066304000001000050819a0000013effde2bb8501004c4004700001688
+RADIO time=90746096 start=90746000 node=1 hex=020071b6d7
+90746096	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+90746096	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+90746096	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+90746096	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+RADIO time=90769080 start=90767000 node=1 hex=61dc3dcdab020002000200020001000100010001006cd7000641103f0000000000000001e206060300ff000000819a0050ffde2bb80000013f5010fca0086900009628
+RADIO time=90770176 start=90770080 node=2 hex=02003dde5f
+90770176	1	`?Pﾁﾚ>+ﾸPￄG[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+90796000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+90796000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=90803080 start=90801000 node=1 hex=61dc3ecdab020002000200020001000100010001006cd7000641103f0000000000000001e206060300ff000000819a0050ffde2bb80000013f5010fca0086900009d9d
+RADIO time=90804176 start=90804080 node=2 hex=02003e456d
+90804176	2	[INFO: RPL       ] creating hop-by-hop option
+90804176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=90836952 start=90835000 node=2 hex=61dc72cdab010001000100010002000200020002007ef5000000000000000001e006066304000001000050819a0000013fffde2bb8501004c4004600008be9
+RADIO time=90838048 start=90837952 node=1 hex=0200722de5
+90838048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+90838048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+90838048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+90838048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+93822000	1	`?Pﾁﾚ?+ﾸPￄF[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+93822000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=93849720 start=93847000 node=1 hex=61dc3fcdab020002000200020001000100010001006cd700075b343f0000000000000001e206060300ff000000819e005030a0d37500000000a002fd201c730000020405a00402080a7d962ed8000000000103030a90a9
+RADIO time=93850816 start=93850720 node=2 hex=02003fcc7c
+93850816	2	[INFO: RPL       ] creating hop-by-hop option
+93850816	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=93869080 start=93867000 node=2 hex=61dc73cdab010001000100010002000200020002007ef5000000000000000001e006066304000001000050819e000000f630a0d376601204c4113d0000020404c4cda9
+RADIO time=93870176 start=93870080 node=1 hex=020073a4f4
+93870176	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+93870176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+93870176	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+93870176	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+93870176	1	`?Pﾁﾞ0ﾠￓv`ￄ=ￄ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+93870176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+93870176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+93870176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=93897080 start=93895000 node=1 hex=61dc40cdab020002000200020001000100010001006cd700075b343f0000000000000001e206060300ff000000819e005030a0d376000000f75010fd202fad0000455b
+RADIO time=93898176 start=93898080 node=2 hex=020040bcf7
+93898176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=93924872 start=93921000 node=1 hex=61dc41cdab02000200020002000100010001000100c08700086cd700075b343f0000000000000001e206060300ff000000819e005030a0d376000000f75018fd20a4bd0000474554202f20485454502f312e310d0a486f73743a205b666430303a3a3230323a323a323a325d0d0a436f6e6e656374696f6e3af969
+RADIO time=93925968 start=93925872 node=2 hex=02004135e6
+93925968	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=93959312 start=93958000 node=1 hex=61dc42cdab02000200020002000100010001000100e08700080f206b6565702d616c6976650d0a0d0a3ee4
+RADIO time=93960408 start=93960312 node=2 hex=020042aed4
+93960408	2	HTTP_SENSOR payload={"node":2,"seq":9,"temp":20,"hum":82}
+93960408	2	[INFO: RPL       ] creating hop-by-hop option
+93960408	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=93992000 start=93988000 node=2 hex=61dc74cdab01000100010001000200020002000200c0c300087ef5000000000000000001e006066304000001000050819e000000f730a0d3b9501804c408910000485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656ea70b
+RADIO time=93993096 start=93993000 node=1 hex=0200741b80
+93993096	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+RADIO time=94028976 start=94026000 node=2 hex=61dc75cdab01000100010001000200020002000200e0c30008106774683a2033370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226e6f6465223a322c22736571223a392c2274656d70223a32302c2268756d223a38327d0f3a
+RADIO time=94030072 start=94029976 node=1 hex=0200759291
+94030072	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+94030072	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+94030072	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+94030072	1	`ﾓ?Pﾁﾞ0ﾠￓﾹPￄﾑHTTP/1.1 200 OK
+94030072	1	Content-Type: application/json
+94030072	1	Content-Length: 37
+94030072	1	Connection: close
+94030072	1	
+94030072	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+94030072	1	{"node":2,"seq":9,"temp":20,"hum":82}[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+94030072	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+94040000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+94040000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=94069080 start=94067000 node=1 hex=61dc43cdab020002000200020001000100010001006cd700075b343f0000000000000001e206060300ff000000819e005030a0d3b9000001765010fca12f6a00003ed8
+RADIO time=94070176 start=94070080 node=2 hex=02004327c5
+94070176	2	[INFO: RPL       ] creating hop-by-hop option
+94070176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=94080952 start=94079000 node=2 hex=61dc76cdab010001000100010002000200020002007ef5000000000000000001e006066304000001000050819e0000017630a0d3b9501104c427470000ba9e
+RADIO time=94082048 start=94081952 node=1 hex=02007609a3
+94082048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+94082048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+94082048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+94082048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+94082048	1	`?Pﾁﾞv0ﾠￓﾹPￄ'G[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+94082048	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=94091080 start=94089000 node=1 hex=61dc44cdab020002000200020001000100010001006cd700075b343f0000000000000001e206060300ff000000819e005030a0d3b9000001765011fca12f6900007e5e
+RADIO time=94092176 start=94092080 node=2 hex=02004498b1
+94092176	2	[INFO: RPL       ] creating hop-by-hop option
+94092176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=94128952 start=94127000 node=2 hex=61dc77cdab010001000100010002000200020002007ef5000000000000000001e006066304000001000050819e0000017630a0d3ba501004c427470000c33a
+RADIO time=94130048 start=94129952 node=1 hex=02007780b2
+94130048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+94130048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+94130048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+94130048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+RADIO time=94136080 start=94134000 node=1 hex=61dc45cdab020002000200020001000100010001006cd700075b343f0000000000000001e206060300ff000000819e005030a0d3ba000001775010fca02f690000131d
+RADIO time=94137176 start=94137080 node=2 hex=02004511a0
+94137176	1	`?Pﾁﾞv0ﾠￓﾺPￄ'G[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+94157000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+94157000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=94166080 start=94164000 node=1 hex=61dc46cdab020002000200020001000100010001006cd700075b343f0000000000000001e206060300ff000000819e005030a0d3ba000001775010fca02f69000018a8
+RADIO time=94167176 start=94167080 node=2 hex=0200468a92
+94167176	2	[INFO: RPL       ] creating hop-by-hop option
+94167176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=94195952 start=94194000 node=2 hex=61dc78cdab010001000100010002000200020002007ef5000000000000000001e006066304000001000050819e0000017730a0d3ba501004c427460000eea0
+RADIO time=94197048 start=94196952 node=1 hex=020078774a
+94197048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+94197048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+94197048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+94197048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+97181000	1	`?Pﾁﾞw0ﾠￓﾺPￄ'F[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+97181000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=97219720 start=97217000 node=1 hex=61dc47cdab020002000200020001000100010001006cd70003fdce3f0000000000000001e206060300ff00000081a000501a98d10b00000000a002fd20f9ec0000020405a00402080a9c674afd000000000103030a7e40
+RADIO time=97220816 start=97220720 node=2 hex=0200470383
+97220816	2	[INFO: RPL       ] creating hop-by-hop option
+97220816	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=97261080 start=97259000 node=2 hex=61dc79cdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005081a0000001261a98d10c601204c4297d0000020404c40cc9
+RADIO time=97262176 start=97262080 node=1 hex=020079fe5b
+97262176	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+97262176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+97262176	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+97262176	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+97262176	1	`?Pﾁﾠ&ﾘ`ￄ)}ￄ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+97262176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+97262176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+97262176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=97303080 start=97301000 node=1 hex=61dc48cdab020002000200020001000100010001006cd70003fdce3f0000000000000001e206060300ff00000081a000501a98d10c000001275010fd2047ed0000736f
+RADIO time=97304176 start=97304080 node=2 hex=020048f47b
+97304176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=97332872 start=97329000 node=1 hex=61dc49cdab02000200020002000100010001000100c08700096cd70003fdce3f0000000000000001e206060300ff00000081a000501a98d10c000001275018fd20bcfd0000474554202f20485454502f312e310d0a486f73743a205b666430303a3a3230323a323a323a325d0d0a436f6e6e656374696f6e3afd48
+RADIO time=97333968 start=97333872 node=2 hex=0200497d6a
+97333968	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=97362312 start=97361000 node=1 hex=61dc4acdab02000200020002000100010001000100e08700090f206b6565702d616c6976650d0a0d0a63b3
+RADIO time=97363408 start=97363312 node=2 hex=02004ae658
+97363408	2	HTTP_SENSOR payload={"node":2,"seq":10,"temp":18,"hum":89}
+97363408	2	[INFO: RPL       ] creating hop-by-hop option
+97363408	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=97405000 start=97401000 node=2 hex=61dc7acdab01000100010001000200020002000200c0c400097ef5000000000000000001e00606630400000100005081a0000001271a98d14f501804c422970000485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e0ef7
+RADIO time=97406096 start=97406000 node=1 hex=02007a6569
+97406096	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+RADIO time=97445008 start=97442000 node=2 hex=61dc7bcdab01000100010001000200020002000200e0c40009106774683a2033380d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226e6f6465223a322c22736571223a31302c2274656d70223a31382c2268756d223a38397dc0ac
+RADIO time=97446104 start=97446008 node=1 hex=02007bec78
+97446104	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+97446104	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+97446104	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+97446104	1	`ﾔ?Pﾁﾠ'ﾘOPￄ"ﾗHTTP/1.1 200 OK
+97446104	1	Content-Type: application/json
+97446104	1	Content-Length: 38
+97446104	1	Connection: close
+97446104	1	
+97446104	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+97446104	1	{"node":2,"seq":10,"temp":18,"hum":89}[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+97446104	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=97455080 start=97453000 node=1 hex=61dc4bcdab020002000200020001000100010001006cd70003fdce3f0000000000000001e206060300ff00000081a000501a98d14f000001a75010fca047aa00000477
+RADIO time=97456176 start=97456080 node=2 hex=02004b6f49
+97456176	2	[INFO: RPL       ] creating hop-by-hop option
+97456176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+97456176	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+97456176	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=97461256 start=97459176 node=1 hex=61dc4ccdab020002000200020001000100010001006cd70003fdce3f0000000000000001e206060300ff00000081a000501a98d14f000001a75011fca047a9000044f1
+RADIO time=97462352 start=97462256 node=2 hex=02004cd03d
+97462352	2	[INFO: RPL       ] creating hop-by-hop option
+97462352	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=97495952 start=97494000 node=2 hex=61dc7ccdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005081a0000001a71a98d14f501104c43f860000d0b7
+RADIO time=97497048 start=97496952 node=1 hex=02007c530c
+97497048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+97497048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+97497048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+97497048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+97501000	1	`?PﾁﾠﾧﾘOPￄ?ﾆ[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+97501000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=97508952 start=97507000 node=2 hex=61dc7dcdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005081a0000001a71a98d150501004c43f86000012ac
+RADIO time=97510048 start=97509952 node=1 hex=02007dda1d
+97510048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+97510048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+97510048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+97510048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+RADIO time=97514128 start=97512048 node=1 hex=61dc4dcdab020002000200020001000100010001006cd70003fdce3f0000000000000001e206060300ff00000081a000501a98d150000001a85010fc9f47a9000099bd
+RADIO time=97515224 start=97515128 node=2 hex=02004d592c
+97515224	1	`?PﾁﾠﾧﾘPPￄ?ﾆ[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+97584000	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::202:2:2:2 
+97584000	1	[INFO: RPL       ] SRH path len: 0, ComprI 15, ComprE 15, ext len 8 (padding 0)
+RADIO time=97613080 start=97611000 node=1 hex=61dc4ecdab020002000200020001000100010001006cd70003fdce3f0000000000000001e206060300ff00000081a000501a98d150000001a85010fc9f47a900009208
+RADIO time=97614176 start=97614080 node=2 hex=02004ec21e
+97614176	2	[INFO: RPL       ] creating hop-by-hop option
+97614176	1	[INFO: RPL       ] packet sent to 0002.0002.0002.0002, status 0, tx 1, new link metric 128
+RADIO time=97640952 start=97639000 node=2 hex=61dc7ecdab010001000100010002000200020002007ef5000000000000000001e00606630400000100005081a0000001a81a98d150501004c43f850000b148
+RADIO time=97642048 start=97641952 node=1 hex=02007e412f
+97642048	1	[INFO: RPL       ] ext hdr: packet from fd00::202:2:2:2 to fd00::1 going up, sender closer 0 (256 < 128), rank error 0, loop detected 0
+97642048	1	[INFO: RPL       ] SRH creating source routing header with destination fd00::1 
+97642048	1	[INFO: RPL       ] SRH node not found, skip SRH insertion
+97642048	2	[INFO: RPL       ] packet sent to 0001.0001.0001.0001, status 0, tx 1, new link metric 128
+104803000	1	`?PﾁﾠﾨﾘPPￄ?ﾅ[INFO: RPL       ] sending a multicast-DIO with rank 128 to ff02::1a
+RADIO time=104839040 start=104836000 node=1 hex=41d84fcdabffff01000100010001007a3b3a1a9b01012100f0008008f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd00000000000000000000000000000083be
+104839040	2	[INFO: RPL       ] received a multicast-DIO from fe80::201:1:1:1, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 128
+104839040	2	[INFO: RPL       ] refreshing lifetime
+114622000	2	[INFO: RPL       ] sending a multicast-DIO with rank 256 to ff02::1a
+RADIO time=114631040 start=114628000 node=2 hex=41d87fcdabffff02000200020002007a3b3a1a9b01009d00f0010008f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd0000000000000000000000000000006e4b
+114631040	1	[INFO: RPL       ] received a multicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 256
+120549000	1	[INFO: RPL       ] nbr: own state, addr fd00::201:1:1:1, DAG state: reachable, MOP 1 OCP 1 rank 128 max-rank 65535, dioint 16, nbr count 1 (Periodic)
+120549000	1	[INFO: RPL       ] nbr: fe80::202:2:2:2  256,   128 =>   384 -- 16  baf  (last tx 0 min ago)
+120549000	1	[INFO: RPL       ] nbr: end of list
+120549000	1	[INFO: RPL       ] links: 2 routing links in total (Periodic)
+120549000	1	[INFO: RPL       ] links: fd00::201:1:1:1  (DODAG root) (lifetime: infinite)
+120549000	1	[INFO: RPL       ] links: fd00::202:2:2:2  to fd00::201:1:1:1 (lifetime: 1680 seconds)
+120549000	1	[INFO: RPL       ] links: end of list
+120765000	2	[INFO: RPL       ] nbr: own state, addr fd00::202:2:2:2, DAG state: reachable, MOP 1 OCP 1 rank 256 max-rank 1280, dioint 16, nbr count 1 (Periodic)
+120765000	2	[INFO: RPL       ] nbr: fe80::201:1:1:1  128,   128 =>   256 -- 16 rbafp (last tx 0 min ago)
+120765000	2	[INFO: RPL       ] nbr: end of list
+180549000	1	[INFO: RPL       ] nbr: own state, addr fd00::201:1:1:1, DAG state: reachable, MOP 1 OCP 1 rank 128 max-rank 65535, dioint 17, nbr count 1 (Periodic)
+180549000	1	[INFO: RPL       ] nbr: fe80::202:2:2:2  256,   128 =>   384 -- 16  baf  (last tx 1 min ago)
+180549000	1	[INFO: RPL       ] nbr: end of list
+180549000	1	[INFO: RPL       ] links: 2 routing links in total (Periodic)
+180549000	1	[INFO: RPL       ] links: fd00::201:1:1:1  (DODAG root) (lifetime: infinite)
+180549000	1	[INFO: RPL       ] links: fd00::202:2:2:2  to fd00::201:1:1:1 (lifetime: 1620 seconds)
+180549000	1	[INFO: RPL       ] links: end of list
+180765000	2	[INFO: RPL       ] nbr: own state, addr fd00::202:2:2:2, DAG state: reachable, MOP 1 OCP 1 rank 256 max-rank 1280, dioint 17, nbr count 1 (Periodic)
+180765000	2	[INFO: RPL       ] nbr: fe80::201:1:1:1  128,   128 =>   256 -- 16 rbafp (last tx 1 min ago)
+180765000	2	[INFO: RPL       ] nbr: end of list
+187145000	2	[INFO: RPL       ] no neighbor needs probing
+224902000	2	[INFO: RPL       ] sending a multicast-DIO with rank 256 to ff02::1a
+RADIO time=224937040 start=224934000 node=2 hex=41d880cdabffff02000200020002007a3b3a1a9b01009d00f0010008f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd0000000000000000000000000000000260
+224937040	1	[INFO: RPL       ] received a multicast-DIO from fe80::202:2:2:2, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 256
+231362000	1	[INFO: RPL       ] sending a multicast-DIO with rank 128 to ff02::1a
+RADIO time=231382040 start=231379000 node=1 hex=41d850cdabffff01000100010001007a3b3a1a9b01012100f0008008f00000fd000000000000000201000100010001040e00080c00040000800001001e003c081e4040ffffffffffffffff00000000fd0000000000000000000000000000000312
+231382040	2	[INFO: RPL       ] received a multicast-DIO from fe80::201:1:1:1, instance_id 0, DAG ID fd00::201:1:1:1, version 240, dtsn 240, rank 128
+231382040	2	[INFO: RPL       ] refreshing lifetime
+240549000	1	[INFO: RPL       ] nbr: own state, addr fd00::201:1:1:1, DAG state: reachable, MOP 1 OCP 1 rank 128 max-rank 65535, dioint 17, nbr count 1 (Periodic)
+240549000	1	[INFO: RPL       ] nbr: fe80::202:2:2:2  256,   128 =>   384 -- 16  baf  (last tx 2 min ago)
+240549000	1	[INFO: RPL       ] nbr: end of list
+240549000	1	[INFO: RPL       ] links: 2 routing links in total (Periodic)
+240549000	1	[INFO: RPL       ] links: fd00::201:1:1:1  (DODAG root) (lifetime: infinite)
+240549000	1	[INFO: RPL       ] links: fd00::202:2:2:2  to fd00::201:1:1:1 (lifetime: 1560 seconds)
+240549000	1	[INFO: RPL       ] links: end of list
+240765000	2	[INFO: RPL       ] nbr: own state, addr fd00::202:2:2:2, DAG state: reachable, MOP 1 OCP 1 rank 256 max-rank 1280, dioint 17, nbr count 1 (Periodic)
+240765000	2	[INFO: RPL       ] nbr: fe80::201:1:1:1  128,   128 =>   256 -- 16 rbafp (last tx 2 min ago)
+240765000	2	[INFO: RPL       ] nbr: end of list
+251928000	2	[INFO: RPL       ] no neighbor needs probing
+END time=300000000
+TEST OK
+Test ended at simulation time: 300000000

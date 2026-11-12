@@ -1,0 +1,11 @@
+{"event":"START","mode":"azure","sensorUrl":"http://[fd00::202:2:2:2]/"}
+{"event":"SENT","mode":"azure","body":{"deviceId":"contiki-ng-01","node":2,"seq":1,"temperature":31,"humidity":85,"sampledAt":"2026-11-12T22:27:41.884Z"},"properties":{"temperatureAlert":"true"}}
+{"event":"SENT","mode":"azure","body":{"deviceId":"contiki-ng-01","node":2,"seq":2,"temperature":33,"humidity":83,"sampledAt":"2026-11-12T22:27:45.383Z"},"properties":{"temperatureAlert":"true"}}
+{"event":"SENT","mode":"azure","body":{"deviceId":"contiki-ng-01","node":2,"seq":3,"temperature":23,"humidity":87,"sampledAt":"2026-11-12T22:27:48.760Z"},"properties":{"temperatureAlert":"false"}}
+{"event":"SENT","mode":"azure","body":{"deviceId":"contiki-ng-01","node":2,"seq":4,"temperature":39,"humidity":82,"sampledAt":"2026-11-12T22:27:52.195Z"},"properties":{"temperatureAlert":"true"}}
+{"event":"SENT","mode":"azure","body":{"deviceId":"contiki-ng-01","node":2,"seq":5,"temperature":19,"humidity":88,"sampledAt":"2026-11-12T22:27:55.597Z"},"properties":{"temperatureAlert":"false"}}
+{"event":"SENT","mode":"azure","body":{"deviceId":"contiki-ng-01","node":2,"seq":6,"temperature":27,"humidity":80,"sampledAt":"2026-11-12T22:27:59.080Z"},"properties":{"temperatureAlert":"false"}}
+{"event":"SENT","mode":"azure","body":{"deviceId":"contiki-ng-01","node":2,"seq":7,"temperature":15,"humidity":81,"sampledAt":"2026-11-12T22:28:02.475Z"},"properties":{"temperatureAlert":"false"}}
+{"event":"SENT","mode":"azure","body":{"deviceId":"contiki-ng-01","node":2,"seq":8,"temperature":29,"humidity":82,"sampledAt":"2026-11-12T22:28:05.812Z"},"properties":{"temperatureAlert":"false"}}
+{"event":"SENT","mode":"azure","body":{"deviceId":"contiki-ng-01","node":2,"seq":9,"temperature":20,"humidity":82,"sampledAt":"2026-11-12T22:28:09.249Z"},"properties":{"temperatureAlert":"false"}}
+{"event":"SENT","mode":"azure","body":{"deviceId":"contiki-ng-01","node":2,"seq":10,"temperature":18,"humidity":89,"sampledAt":"2026-11-12T22:28:12.731Z"},"properties":{"temperatureAlert":"false"}}

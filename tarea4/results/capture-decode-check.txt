@@ -1,0 +1,15 @@
+Running as user "root" and group "root". This could be dangerous.
+    1   0.000000 fe80::201:1:1:1 → ff02::1a     ICMPv6 97 RPL Control (DODAG Information Object)
+    2   0.703000 fe80::202:2:2:2 → fe80::201:1:1:1 ICMPv6 102 RPL Control (DODAG Information Object)
+    3   0.707200              →              IEEE 802.15.4 5 Ack
+Running as user "root" and group "root". This could be dangerous.
+    6  45.458304 fd00::202:2:2:2 → fd00::1      MQTT 95 Connect Command
+    8  45.578304      fd00::1 → fd00::202:2:2:2 MQTT 72 Connect Ack
+   10  55.395000 fd00::202:2:2:2 → fd00::1      MQTT 120 Publish Message (id=3) [tel329/temperature]
+   11  55.448304      fd00::1 → fd00::202:2:2:2 MQTT 72 Publish Ack (id=3)
+   13  65.395000 fd00::202:2:2:2 → fd00::1      MQTT 120 Publish Message (id=5) [tel329/temperature]
+   14  65.418304      fd00::1 → fd00::202:2:2:2 MQTT 72 Publish Ack (id=5)
+   16  75.395000 fd00::202:2:2:2 → fd00::1      MQTT 120 Publish Message (id=7) [tel329/temperature]
+   17  75.480304      fd00::1 → fd00::202:2:2:2 MQTT 72 Publish Ack (id=7)
+   19  85.395000 fd00::202:2:2:2 → fd00::1      MQTT 120 Publish Message (id=9) [tel329/temperature]
+   20  85.483304      fd00::1 → fd00::202:2:2:2 MQTT 72 Publish Ack (id=9)

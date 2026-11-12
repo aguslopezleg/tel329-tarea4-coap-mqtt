@@ -1,0 +1,1 @@
+PASS: 10 lecturas reales Contiki-NG IPv6/HTTP -> middleware -> Azure IoT Hub -> Event Hubs consumer. Coinciden identidad, secuencia, temperatura, humedad, alerta y deviceId autenticado.
