@@ -1,5 +1,7 @@
 # TEL329 - Tarea 4: CoAP, MQTT y Azure IoT Hub
 
+**Integrantes:** Agustín López, Sebastián Romero y Óscar Carrasco.
+
 Implementación académica en Contiki-NG/Cooja de redes RPL Lite con cinco sensores, captura de tráfico y medición de tiempos de respuesta. Incluye la integración real de un sensor HTTP de Contiki-NG con Azure IoT Hub y un consumidor de Event Hubs.
 
 - [Informe PDF (8 páginas)](tarea4/output/TEL329_Tarea4_Informe.pdf)

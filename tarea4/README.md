@@ -1,5 +1,7 @@
 # TEL329 - Tarea 4: CoAP y MQTT
 
+**Integrantes:** Agustín López, Sebastián Romero y Óscar Carrasco.
+
 Entrega con firmware, simulaciones Cooja, registros originales, capturas PCAP, análisis y un informe PDF/Markdown. Las actividades 1-3 se ejecutaron sobre Contiki-NG. La actividad 4 se ejecutó con un sensor HTTP real de Contiki-NG, middleware y Azure IoT Hub F1: diez lecturas enviadas y recibidas de extremo a extremo. Se conserva además el control con sumidero local.
 
 ## Contenido

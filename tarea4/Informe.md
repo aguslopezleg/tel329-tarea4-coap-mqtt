@@ -1,28 +1,31 @@
 # Tarea 4: Mensajería CoAP y MQTT
 
 
-TEL329 - Redes de Sensores - 2026. Informe de implementación y mediciones. Fecha: 12 de noviembre de 2026.
+TEL329 - Redes de Sensores | 12 de noviembre de 2026.
 
 
-Se implementaron y ejecutaron las cuatro actividades. CoAP y MQTT se midieron en Contiki-NG/Cooja, y la actividad 4 se verificó con diez lecturas reales del sensor simulado enviadas a Azure IoT Hub y recibidas desde su endpoint integrado. Se conserva además una prueba local independiente. Las temperaturas y humedades son sintéticas, generadas por firmware de Contiki-NG.
+Integrantes: Agustín López, Sebastián Romero y Óscar Carrasco.
+
+
+En esta tarea comparamos el envío de lecturas de temperatura mediante CoAP y MQTT en una red de sensores simulada. Para ello usamos Contiki-NG y Cooja, medimos los tiempos de confirmación de ambos protocolos y luego conectamos un sensor a Azure IoT Hub. En la última parte comprobamos el recorrido completo de diez lecturas, desde el mote hasta el consumidor en la nube. Las lecturas se generan por software; representan datos de prueba, no mediciones ambientales.
 
 
 ## 1. Escenario experimental
 
 
-Se utilizó Contiki-NG release/v5.1, Cooja, Java 21 y Linux AArch64 en Docker. Cada escenario usa una raíz RPL Lite y cinco sensores (IDs 2 a 6), IPv6/6LoWPAN y MAC CSMA. La raíz conecta la WSN al anfitrión Linux por SLIP y tunslip6; el anfitrión tiene fd00::1 y ejecuta el servidor CoAP o el broker Mosquitto. Son seis motes, además del anfitrión de servicios.
+Preparamos dos escenarios con la misma distribución de nodos: una raíz RPL Lite y cinco sensores, identificados del 2 al 6. Ambos trabajan con IPv6/6LoWPAN y CSMA. Usamos Contiki-NG release/v5.1 y Cooja con Java 21, dentro de un entorno Linux AArch64 en Docker. La raíz conecta la red con Linux mediante SLIP y tunslip6. En ese anfitrión, con dirección fd00::1, ejecutamos el servidor CoAP o el broker Mosquitto. Así, cada red tiene seis motes y un servicio externo que recibe sus mensajes.
 
 
 ![Fuente: coordenadas de simulations/*.csc. Las líneas muestran alcance geométrico, no padres RPL fijos.](output/topologia.png)
 
 
-La semilla es 1; cada simulación de comparación dura 240 s, a velocidad 1:1. UDGM utiliza 50 m de alcance, 100 m de interferencia y probabilidad de éxito configurada 1. Esto no elimina contención, colisiones ni retransmisiones. Se esperan 60 s antes de iniciar tráfico, con desfase por ID. La temperatura sintética es 15 + random_rand() % 25: enteros entre 15 y 39 °C. No proviene de un sensor físico.
+Cada comparación dura 240 s y usa la semilla 1, con velocidad de simulación 1:1. Configuramos UDGM con 50 m de alcance y 100 m de interferencia. Aunque la probabilidad de éxito del modelo está fijada en 1, todavía pueden existir colisiones, espera por el canal y retransmisiones. Dejamos pasar 60 s antes de iniciar los envíos y los desfasamos según el ID del nodo. La expresión 15 + random_rand() % 25 produce temperaturas enteras entre 15 y 39 °C.
 
 
 ## 2. Actividad 1: RPL Lite y CoAP
 
 
-Los cinco clientes ejecutan coap-sensor.c y notifican un único recurso mediante POST confirmable (CON) a coap://[fd00::1]/temperature. El mensaje JSON contiene temperatura y metadatos node/seq. Se eligió notificación activa mediante POST; no se implementó la extensión Observe ni una consulta GET periódica.
+Para la primera actividad adaptamos coap-sensor.c, de manera que cada cliente enviara su temperatura al recurso /temperature del servidor en fd00::1. Elegimos mensajes POST confirmables (CON) para que cada lectura tuviera una respuesta que pudiéramos medir. El JSON incluye la temperatura, el nodo que la generó y su secuencia. En este caso la notificación parte del sensor mediante POST; no usamos la extensión Observe.
 
 
 ```text
@@ -33,7 +36,7 @@ COAP_BLOCKING_REQUEST(&endpoint, request, response);
 ```
 
 
-El servidor aiocoap valida la lectura y devuelve 2.04 Changed con el mismo Message ID y token en el ACK. En el registro de Contiki aparece code=68, codificación binaria de 2.04. La confirmación se observa en la captura y en el callback del sensor. Después de la respuesta, el cliente espera 10 s para enviar otra lectura; por ello el intervalo entre envíos incluye el RTT.
+Al recibir una lectura válida, el servidor aiocoap devuelve 2.04 Changed dentro del ACK, conservando el Message ID y el token. En la salida de Contiki esta respuesta aparece como code=68. Pudimos comprobarla tanto en los paquetes capturados como en el registro del cliente. Después de recibirla, el sensor espera 10 s antes del siguiente envío. Por eso, el tiempo entre lecturas incluye esos 10 s más el RTT de la anterior.
 
 
 ```text
@@ -45,16 +48,16 @@ Servidor: {"event":"COAP_RECEIVED","node":2,"seq":1,"temp":20}
 ```
 
 
-Se obtuvieron 90 notificaciones y 90 confirmaciones, con 18 intercambios por sensor y ningún intercambio sin respuesta en la captura analizada. El RTT medio fue 124.31 ms; mediana 131.90 ms y percentil 95 192.08 ms. Estos resultados corresponden al escenario y semilla indicados.
+En total recibimos 90 notificaciones y sus 90 confirmaciones. Cada sensor completó 18 intercambios. El RTT medio fue 124.31 ms; mediana 131.90 ms y percentil 95 192.08 ms. En esta ejecución todos los envíos tuvieron respuesta.
 
 
-Evidencias: results/coap/COOJA.testlog, server.log, node2.pcap a node6.pcap, radio.pcap, tunnel.pcap y responses.csv. La salida de terminal de Cooja finaliza con TEST OK. El código adaptado, Makefile y configuración se incluyen en firmware/.
+El ejemplo anterior corresponde a la primera lectura del nodo 2. Para revisar los demás intercambios dejamos los registros de Cooja y del servidor en results/coap/, junto con los PCAP y responses.csv. Cooja terminó la ejecución con TEST OK. El programa, el Makefile y la configuración están en firmware/.
 
 
 ## 3. Actividad 2: RPL Lite y MQTT
 
 
-Los cinco sensores ejecutan mqtt-sensor.c con el motor MQTT de Contiki-NG. Se conectan al broker Mosquitto 2.0.11 en [fd00::1]:1883 y publican exclusivamente en tel329/temperature, usando MQTT 3.1.1, QoS 1 y retain desactivado. Cada cliente tiene un identificador distinto: tel329-node-ID. La conexión TCP se mantiene abierta.
+En la segunda actividad usamos mqtt-sensor.c y el motor MQTT de Contiki-NG. Los cinco sensores se conectan a Mosquitto 2.0.11 en [fd00::1]:1883 y comparten un solo tema: tel329/temperature. Configuramos MQTT 3.1.1 con QoS 1 para contar con una confirmación por publicación. Cada nodo usa su propio identificador de cliente, tel329-node-ID, y mantiene abierta la conexión TCP. La opción retain queda desactivada.
 
 
 ```text
@@ -65,7 +68,7 @@ mqtt_publish(&conn, &mid, topic, (uint8_t *)payload,
 ```
 
 
-Mosquitto recibe el PUBLISH y devuelve PUBACK con el identificador correspondiente. Un suscriptor independiente, mosquitto_sub, recibe el mismo tema y permite comprobar el comportamiento publicación/suscripción. El PUBACK confirma recepción por el broker; no demuestra por sí solo que la aplicación suscriptora haya procesado el dato.
+Cuando Mosquitto recibe un PUBLISH, responde con el PUBACK correspondiente. Además, dejamos mosquitto_sub suscrito al mismo tema para comprobar que las lecturas llegaban al otro extremo de la aplicación. Esta distinción importa al interpretar la medición: el PUBACK confirma que el broker recibió el mensaje; la entrega al suscriptor se comprueba por separado en su registro.
 
 
 ```text
@@ -77,19 +80,19 @@ tel329/temperature {"node":2,"seq":1,"temp":29}
 ```
 
 
-Se registraron 85 publicaciones y 85 PUBACK correlacionados. El RTT medio fue 130.41 ms; mediana 127.34 ms y p95 215.96 ms. Las conexiones se inician tras 60 s; la primera publicación ocurre en una iteración posterior. El establecimiento TCP/CONNECT queda en los PCAP, pero no se suma al RTT PUBLISH-PUBACK.
+Al finalizar registramos 85 publicaciones y 85 PUBACK correlacionados. El RTT medio fue 130.41 ms; mediana 127.34 ms y p95 215.96 ms. La primera publicación se realiza en una iteración posterior a la conexión, lo que explica que haya 17 lecturas por sensor, frente a las 18 de CoAP. Para calcular el RTT de publicación dejamos fuera el establecimiento TCP/CONNECT, aunque también quedó capturado.
 
 
-Evidencias: results/mqtt/COOJA.testlog, broker.log, subscriber.log, nodeN.pcap, radio.pcap, tunnel.pcap y responses.csv. El laboratorio utiliza MQTT sin TLS y un broker anónimo dentro del contenedor. No se usa un broker simulado ni se reemplaza MQTT por UDP.
+La salida del suscriptor coincide con el mensaje enviado por el nodo 2. En results/mqtt/ se incluyen los registros de Cooja, Mosquitto y el suscriptor, además de las capturas y la tabla completa de respuestas. Para esta comparación local usamos un broker anónimo dentro del contenedor y MQTT sin TLS. La conexión con Azure, presentada más adelante, sí utiliza cifrado.
 
 
 ## 4. Actividad 3: captura y tiempos de respuesta
 
 
-Se capturaron tres niveles: transmisiones IEEE 802.15.4 mediante el observador de Cooja; paquetes IPv6 en cada sensor mediante un procesador pasivo de NETSTACK; y tráfico del túnel mediante tcpdump. Los bytes se conservan sin alterar. analyze.py exporta las capturas a PCAP y usa tshark para decodificar los protocolos. Los PCAP de sensores y radio tienen timestamps de simulación; el túnel usa el reloj real del contenedor.
+Para relacionar los mensajes con sus respuestas registramos el tráfico en tres lugares: la radio IEEE 802.15.4 de Cooja, la capa IPv6 de cada sensor y el túnel hacia Linux, donde usamos tcpdump. El script analyze.py convierte los registros a PCAP y los decodifica con tshark. Las capturas de radio y sensores usan el tiempo de simulación, mientras que la del túnel usa el reloj del contenedor.
 
 
-El RTT se calcula en el mismo sensor: t(ACK recibido) - t(CON enviado), o t(PUBACK recibido) - t(PUBLISH enviado). CoAP se correlaciona por Message ID y token; MQTT por flujo TCP e identificador de paquete. Se mide desde el primer envío y se conserva el número de solicitudes decodificadas; ese contador no equivale a retransmisiones TCP. Se excluyen paquetes de tránsito RPL con Segments Left mayor que cero. Los registros de aplicación verifican los RTT con una tolerancia de 2 ms; CLOCK_SECOND=1000.
+Calculamos el RTT como la diferencia entre el primer envío y la recepción de su confirmación, siempre desde el mismo sensor. En CoAP emparejamos CON y ACK por Message ID y token; en MQTT usamos el flujo TCP y el identificador de PUBLISH/PUBACK. Excluimos los paquetes RPL que todavía iban en tránsito (Segments Left mayor que cero). También contrastamos los tiempos de los PCAP con los del programa: coincidieron con una tolerancia de 2 ms, usando CLOCK_SECOND=1000. El contador de solicitudes decodificadas se conserva aparte y no representa todas las retransmisiones TCP.
 
 
 | Protocolo | n | Media ms | Mediana ms | p95 ms | Mín-max ms |
@@ -110,10 +113,10 @@ El RTT se calcula en el mismo sensor: t(ACK recibido) - t(CON enviado), o t(PUBA
 ![Fuente: results/responses.csv; 60-240 s de simulación, semilla 1. Cajas: cuartiles; línea: mediana; puntos: valores atípicos.](output/rtt.png)
 
 
-## 5. Muestra trazable y análisis
+## 5. Comparación de las mediciones
 
 
-La tabla presenta las secuencias 1 y 10 de cada nodo en cada protocolo, seleccionadas con una regla fija. Las estadísticas anteriores utilizan todos los intercambios completados, no solo esta muestra. Los CSV conservan los números de trama, instantes, identificadores y RTT para reproducir cada pareja en Wireshark.
+Para mostrar algunos intercambios concretos elegimos las secuencias 1 y 10 de cada nodo en ambos protocolos. Aplicamos la misma regla a los cinco sensores para evitar escoger solo los casos más favorables. Los promedios y percentiles de la página anterior se calcularon con la muestra completa. Los CSV permiten ubicar cada solicitud y respuesta en Wireshark mediante sus números de trama e identificadores.
 
 
 | Nodo | Secuencia | CoAP RTT ms | MQTT RTT ms |
@@ -130,28 +133,28 @@ La tabla presenta las secuencias 1 y 10 de cada nodo en cada protocolo, seleccio
 | 6 | 10 | 129.53 | 194.82 |
 
 
-En esta ejecución, la diferencia de medias MQTT menos CoAP fue 6.11 ms. La dispersión por nodo muestra el efecto de los recorridos multihop y de la planificación CSMA. CoAP utiliza UDP y un ACK con respuesta; MQTT agrega TCP, su control de flujo y PUBACK. La captura incluye el procesamiento del servicio, el túnel y las colas, de modo que el tamaño de cabecera por sí solo no explica el resultado.
+Al comparar los promedios, MQTT tardó 6.11 ms más que CoAP en confirmar los mensajes. Sin embargo, esa diferencia no aparece de la misma manera en todos los nodos. Cada salto agrega transmisiones y oportunidades de esperar por el canal. Además, MQTT incorpora el funcionamiento de TCP, mientras que CoAP trabaja sobre UDP. Como también medimos el paso por el túnel y el procesamiento del servicio, no podemos atribuir la diferencia únicamente a las cabeceras de los protocolos.
 
 
-En los dos escenarios, el registro RPL sitúa al nodo 2 a un salto de la raíz; 3 y 5 a dos saltos; 4 y 6 a tres saltos. La ruta concreta del nodo 6 cambia de padre entre escenarios. Por tanto, el mismo alcance geométrico no garantiza idénticos caminos ni condiciones de contención.
+La distancia en saltos ayuda a entender las diferencias entre sensores. El nodo 2 llega a la raíz en un salto; los nodos 3 y 5 necesitan dos, y los nodos 4 y 6, tres. Además, RPL eligió un padre distinto para el nodo 6 en cada escenario. Aunque conservamos las posiciones, las rutas y la competencia por el canal no fueron exactamente iguales.
 
 
-No es una comparación de consultas idénticas: se mide confirmación de telemetría. CoAP 2.04 confirma el procesamiento del POST, mientras PUBACK confirma la aceptación por el broker. Las garantías y los destinatarios son distintos. Los motores de protocolo también consumen números aleatorios y generan tráfico de control diferente. El intervalo CoAP es 10 s después de cada respuesta; MQTT revisa su estado cada 10 s. Estas diferencias limitan la comparación.
+También hay diferencias en lo que confirma cada protocolo. La respuesta CoAP 2.04 indica que el servidor procesó el POST, mientras que PUBACK confirma la aceptación por el broker. Estamos comparando tiempos de confirmación de telemetría, con alcances distintos. A esto se suma que CoAP espera 10 s después de cada respuesta y MQTT revisa su estado cada 10 s. Los protocolos también generan tráfico de control y consumen números aleatorios de manera diferente.
 
 
-Una sola topología y semilla no permiten concluir que un protocolo sea universalmente más rápido. Tampoco equivalen a mediciones sobre hardware físico ni incluyen DTLS/TLS. Para generalizar habría que repetir con varias semillas, distancias, tasas de publicación y pérdidas, manteniendo explícita la métrica. Se incluyen los intercambios no emparejados en unmatched.json, aunque su número en esta ejecución puede ser cero.
+Con estas condiciones, la diferencia observada es pequeña y depende del escenario. Una sola ejecución no permite afirmar que uno de los protocolos siempre sea más rápido. Para sostener una conclusión más amplia habría que repetir con varias semillas, cargas y condiciones de pérdida. También sería necesario evaluar el efecto del cifrado y del hardware físico. En esta ejecución todos los mensajes enviados tuvieron confirmación; los archivos unmatched.json registran cero intercambios pendientes.
 
 
 ## 6. Actividad 4: integración real con Azure
 
 
-Se creó el IoT Hub tel329-t4-alopez-20261112 en Brazil South, nivel F1 Free. El portal confirmó USD 0/mes y una cuota de 8.000 mensajes diarios. Se registró contiki-ng-01 con autenticación simétrica. No se contrató un nivel pagado ni se habilitaron complementos de pago.
+Para llevar las lecturas a la nube usamos el Hub tel329-t4-alopez-20261112, en Brazil South, y registramos el dispositivo contiki-ng-01 con autenticación simétrica. Elegimos el nivel F1 Free: el portal indicaba USD 0 al mes y una cuota de 8.000 mensajes diarios, suficiente para las diez lecturas de esta prueba.
 
 
-El escenario utiliza una raíz RPL Lite border router y un sensor HTTP de Contiki-NG (http-sensor.c). El middleware Node.js 22 consulta GET / en la dirección IPv6 del mote, recibe temperatura y humedad y las envía a Azure mediante MQTT/TLS. Un consumidor independiente usa EventHubConsumerClient y AMQP/TLS para leer el endpoint integrado compatible con Event Hubs.
+El recorrido parte de un mote que ejecuta http-sensor.c y se conecta a Linux a través del border router RPL Lite. El middleware, escrito para Node.js 22, consulta GET / en la dirección IPv6 del sensor, lee temperatura y humedad y las envía a Azure por MQTT/TLS. Finalmente, un programa independiente usa EventHubConsumerClient para recibirlas desde el endpoint integrado, mediante AMQP/TLS.
 
 
-4.a - Resultado del middleware. Se confirmaron diez envíos con event=SENT y mode=azure. El middleware transforma temp/hum en temperature/humidity, conserva node/seq y agrega deviceId, sampledAt y temperatureAlert. Esta última propiedad vale true solo cuando la temperatura supera 30 °C. Las claves permanecen exclusivamente en .env local y no se incluyen en el ZIP.
+4.a - Middleware. Obtuvimos diez envíos confirmados, identificados en el registro con event=SENT y mode=azure. Antes de enviarlos, el programa cambia los nombres temp/hum por temperature/humidity y agrega el dispositivo, la fecha de lectura y temperatureAlert. Esta alerta se activa sobre 30 °C. El nodo y la secuencia se conservan para seguir cada lectura a través de todo el recorrido. Las claves se guardan en el archivo local .env, que se excluye de la entrega.
 
 
 ```text
@@ -168,13 +171,13 @@ event=AZURE_RECEIVED, partition=0
 ```
 
 
-4.b - Resultado del sensor. El mote entregó diez respuestas JSON por IPv6/TCP. La humedad se genera en el intervalo 80-89 % y la temperatura en 15-39 °C. Los registros HTTP_SENSOR de Cooja conservan las lecturas originales. No se sustituyó el mote por un generador de datos del anfitrión.
+4.b - Sensor. El mote respondió diez consultas con datos JSON sobre IPv6/TCP. La primera lectura, mostrada arriba, fue de 31 °C y 85 % de humedad. El firmware genera temperaturas entre 15 y 39 °C y humedades entre 80 y 89 %. Cada respuesta queda registrada como HTTP_SENSOR en Cooja, lo que permite contrastar el dato original con el enviado a la nube.
 
 
-4.c - Resultado del suscriptor. Se recibieron diez eventos únicos desde Azure, con event=AZURE_RECEIVED. check_azure.py compara todas las lecturas originales, los envíos y los eventos recibidos: coinciden identidad, secuencia, temperatura, humedad y alerta. También comprueba que iothub-connection-device-id coincide con contiki-ng-01, autenticado por el servicio.
+4.c - Suscriptor. Recibimos diez eventos únicos desde Azure, registrados como AZURE_RECEIVED. Al compararlos con el mote y el middleware, coincidieron el nodo, la secuencia, la temperatura, la humedad y la alerta. La propiedad iothub-connection-device-id también confirmó que Azure los recibió del dispositivo contiki-ng-01. El script check_azure.py realiza estas comprobaciones para toda la muestra.
 
 
-Evidencias: results/azure/COOJA.testlog, middleware.log, subscriber.log, tunnel.pcap, device-registration.log, readings.csv, summary.json y verification.txt. Las evidencias CoAP, MQTT y del control local se conservan en carpetas separadas. Las cuatro pruebas unitarias del middleware también fueron superadas.
+Los registros del mote, del middleware y del consumidor están en results/azure/, junto con readings.csv y el resultado de la verificación. La simulación terminó normalmente con TEST OK. Como comprobación adicional, el middleware superó cuatro pruebas para lecturas válidas, datos fuera de rango, errores HTTP y sensores que no responden.
 
 
 ## 7. Evidencia de Azure y lecturas recibidas
@@ -190,7 +193,7 @@ Evidencias: results/azure/COOJA.testlog, middleware.log, subscriber.log, tunnel.
 | Lecturas enviadas / recibidas | 10 / 10 |
 
 
-Se omite la captura del portal en esta edición pública para proteger los datos de la cuenta. La configuración del recurso se comprobó en el portal; los resultados se acreditan mediante los registros originales del mote, middleware y consumidor de Azure.
+La tabla resume la configuración que comprobamos en el portal de Azure. Dejamos fuera de la edición pública la captura de esa pantalla, porque contiene datos de la cuenta. Para respaldar los resultados incluimos los registros originales del sensor, del middleware y del consumidor, además de las diez lecturas recibidas que se muestran a continuación.
 
 
 | Secuencia | Temperatura °C | Humedad % | Alerta >30 °C |
@@ -207,16 +210,16 @@ Se omite la captura del portal en esta edición pública para proteger los datos
 | 10 | 18 | 89 | false |
 
 
-La tabla deriva de los eventos recibidos desde Azure y se contrasta con el mote y el middleware. El suscriptor se inició antes del envío, leyendo desde su instante de arranque. Se utilizó la directiva service para el consumidor; la identidad de dispositivo se configuró mediante el SDK oficial azure-iothub porque la vista Dispositivos del portal devolvía un error. No se ampliaron permisos del usuario ni se deshabilitó TLS.
+Iniciamos el suscriptor antes de enviar la primera lectura para que pudiera recibir toda la muestra desde su arranque. El consumidor usa la directiva service. Para registrar la identidad del sensor recurrimos al SDK oficial azure-iothub, ya que la vista Dispositivos del portal devolvía un error. La conexión posterior del dispositivo y la recepción de los mensajes permitieron comprobar que el registro había quedado operativo.
 
 
-La prueba local anterior también conservó diez lecturas idénticas entre sensor, archivo y consumidor. Esa prueba se mantiene como control adicional; la evidencia de cumplimiento de la nube es la ejecución real de results/azure/.
+Antes de conectar con Azure también probamos el recorrido local, guardando diez lecturas en un archivo y leyéndolas con otro programa. Ese control ayudó a verificar la transformación de los datos. Sus registros se conservan en results/http/; la prueba de conexión con la nube está en results/azure/.
 
 
 ## 8. Reproducción, publicación y referencias
 
 
-El ZIP contiene firmware, simulaciones, scripts, PCAP, registros originales, datos procesados y este informe en PDF y Markdown. Los servicios y el túnel se ejecutan dentro del mismo contenedor Linux. setup.sh obtiene los commits fijados de Contiki-NG/Cooja y prepara el entorno; run.sh ejecuta los escenarios por separado. No se requieren los archivos de la tarea anterior.
+Organizamos la entrega para que se puedan revisar los resultados y repetir las pruebas. El ZIP reúne el firmware, las simulaciones, los scripts, los PCAP, los registros y el informe en PDF y Markdown. setup.sh descarga las versiones fijadas de Contiki-NG y Cooja, y run.sh ejecuta los escenarios por separado. Para Azure, los procesos de Node.js comparten la red del contenedor que contiene el túnel IPv6.
 
 
 ```text
@@ -233,10 +236,10 @@ python3 tarea4/scripts/build_report.py
 ```
 
 
-La integración Azure quedó ejecutada y verificada. cloud/LEEME_AZURE.md documenta cómo repetirla con las credenciales locales. El Hub permanece disponible en el nivel F1 gratuito. La adaptación, el informe y las evidencias se publican en el repositorio público https://github.com/aguslopezleg/tel329-tarea4-coap-mqtt, para cumplir el requisito del enunciado.
+Las instrucciones para repetir la integración con Azure están en cloud/LEEME_AZURE.md. Las credenciales se configuran localmente y el Hub utilizado permanece en el nivel gratuito F1. Publicamos el código, el informe y las evidencias en https://github.com/aguslopezleg/tel329-tarea4-coap-mqtt, de acuerdo con lo solicitado en el enunciado.
 
 
-Conclusión. CoAP y MQTT funcionaron sobre RPL Lite con cinco sensores, respaldados por capturas y tiempos correlacionados. La actividad 4 completó el recorrido sensor Contiki-NG, middleware, Azure IoT Hub y consumidor: diez lecturas fueron verificadas de extremo a extremo. El código y las evidencias se incluyen en el repositorio público de la entrega.
+En conjunto, las pruebas permitieron observar dos formas distintas de enviar telemetría sobre RPL Lite. Ambos protocolos entregaron todas las lecturas generadas; CoAP tuvo una media de confirmación ligeramente menor, aunque esa diferencia no basta para generalizar. La integración con Azure completó el recorrido desde el mote hasta el consumidor y conservó los valores de las diez lecturas. Las capturas y los registros incluidos permiten revisar esas conclusiones a partir de los datos.
 
 
 - [Repositorio público de esta entrega](https://github.com/aguslopezleg/tel329-tarea4-coap-mqtt)
